@@ -1,0 +1,4 @@
+assets/*.aux
+assets/*.log
+assets/*.out
+_site/

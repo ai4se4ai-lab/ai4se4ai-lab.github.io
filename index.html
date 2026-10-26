@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f2">
+  <title>Majid Babaei — Reliable AI. Checkable Software.</title>
+  <meta name="description" content="Majid Babaei, Assistant Professor at the University of the Fraser Valley. Research in reliable AI-assisted software engineering, verifiable agents, and software testing.">
+  <meta property="og:title" content="Majid Babaei — AI × Software Engineering">
+  <meta property="og:description" content="Research, software, and teaching at the intersection of AI and software engineering.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ai4se4ai-lab.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="assets/theme.js"></script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/publication-data.js" defer></script>
+  <script src="assets/main.js" defer></script>
+  <script src="assets/research-layout.js" defer></script>
+  <script src="assets/research-map.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="identity" href="#home" aria-label="Majid Babaei, home"><span class="monogram">m<span>b</span>.</span><span>MAJID BABAEI<span class="identity-sub">AI × SOFTWARE ENGINEERING</span></span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span>+</span></button>
+  <nav id="navigation" aria-label="Main navigation"><a href="#research">Research</a><a href="#projects">Projects</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#about">About</a></nav>
+  <div class="header-actions"><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><span id="theme-icon" aria-hidden="true">◐</span><span id="theme-label">Dark</span></button><a class="header-contact" href="#contact">Let’s connect <span>↗</span></a></div>
+</header>
+<main id="main">
+  <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
+    <div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> ASSISTANT PROFESSOR · RESEARCHER · EDUCATOR</p>
+      <h1 id="hero-title">Reliable AI.<br>Checkable<br><span class="serif">software.</span><span class="title-dot">●</span></h1>
+      <p class="hero-description">I’m <strong>Majid Babaei</strong>. I study how to make AI-assisted software engineering reliable—and its results something we can actually verify.</p>
+      <div class="hero-actions"><a class="button primary" href="#projects">Explore my work <span>↗</span></a><a class="text-link" href="assets/02_Curriculum_Vitae.pdf" target="_blank" rel="noopener">Curriculum vitae <span>↓</span></a></div>
+      <p class="hero-affiliation">School of Computing · University of the Fraser Valley<br><span>British Columbia, Canada</span></p>
+    </div>
+    <div class="research-visual research-map" aria-label="Interactive map of research connecting AI and software engineering">
+      <div class="visual-heading"><span class="status-dot"></span> TWO WORLDS. SHARED EVIDENCE. <span>AI ↔ SE</span></div>
+      <div class="worlds-stage" id="worlds-stage">
+        <svg id="research-connections" class="research-connections" viewBox="0 0 560 560" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="world world-ai"><div class="planet-sphere"><span>AI</span><i></i></div><strong>Artificial intelligence</strong><small>Reason · Compose · Learn</small></div>
+        <div class="world world-software"><div class="planet-sphere"><span>SE</span><i></i></div><strong>Software engineering</strong><small>Specify · Test · Verify</small></div>
+        <div class="affinity-spectrum" aria-hidden="true"><span>AI</span><i></i><span>SE</span></div>
+        <span class="bridge-caption" id="map-context" aria-live="polite">AI systems ← shared methods → software systems</span>
+        <div id="research-nodes"></div>
+        <div id="research-tooltip" class="research-tooltip" role="tooltip" hidden></div>
+      </div>
+      <div class="visual-bottom"><span>HOVER TO EXPLORE · CLICK FOR DETAILS</span><button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="false" aria-label="Pause research animation">Pause ⏸</button></div>
+      <section id="research-detail" class="research-detail" role="dialog" aria-modal="false" aria-labelledby="detail-title" hidden>
+        <button id="detail-close" class="detail-close" type="button" aria-label="Close project details">×</button>
+        <p id="detail-category" class="eyebrow"></p><h3 id="detail-title" tabindex="-1"></h3><p id="detail-description"></p><p id="detail-position" class="placement-reason"></p><p id="detail-status" class="small"></p><p id="detail-tags" class="small"></p><a id="detail-link" class="text-link" target="_blank" rel="noopener">Explore repository ↗</a>
+      </section>
+    </div>
+  </section>
+  <div class="context-strip section-wrap"><span>RESEARCH THROUGHLINE</span><p>Explicit contracts. Traceable decisions. <strong>Verifiable results.</strong></p><a href="#research" aria-label="Explore research themes">↓</a></div>
+  <section class="section-wrap section" id="research">
+    <div class="section-heading"><p class="eyebrow">01 / RESEARCH AGENDA</p><h2>Making automation<br><span class="serif">worthy of trust.</span></h2><p>From agent collaboration to experimental infrastructure, my work connects automated decisions to the evidence needed to validate them.</p></div>
+    <div class="research-columns"><article><span class="topic-symbol">⌘</span><p class="eyebrow">01 — SPECIFY</p><h3>Verifiable agents</h3><p>Explicit skill contracts, checked composition, and typed hand-offs for reliable agent collaboration.</p><a href="#projects" data-project-category="Agents">SkillSpec · AgentM2M · AutoM2M ↗</a></article><article><span class="topic-symbol">⌁</span><p class="eyebrow">02 — UNDERSTAND</p><h3>Evidence from software</h3><p>Knowledge graphs and execution traces that support testing, maintenance, and explainable diagnosis.</p><a href="#projects" data-project-category="Analysis">TAAF · SIKG · RapidPay ↗</a></article><article><span class="topic-symbol">⊞</span><p class="eyebrow">03 — VALIDATE</p><h3>Checked experiments</h3><p>Statically checked pipelines, runtime guards, and evidence-bound readiness for shared HPC infrastructure.</p><a href="#projects" data-project-category="Infrastructure">use-hpc · RES-AI ↗</a></article></div>
+  </section>
+  <section class="projects-section" id="projects"><div class="section-wrap section">
+    <div class="section-heading split-heading"><div><p class="eyebrow">02 / RESEARCH SOFTWARE</p><h2>Ideas, made <span class="serif">executable.</span></h2></div><p>Open research software, reproducible artifacts, and current prototypes. Explore the work behind the papers.</p></div>
+    <div class="filter-bar" role="group" aria-label="Filter research projects"><button class="filter active" data-filter="All" aria-pressed="true">All work</button><button class="filter" data-filter="Agents" aria-pressed="false">Agents & contracts</button><button class="filter" data-filter="Analysis" aria-pressed="false">Testing & analysis</button><button class="filter" data-filter="Infrastructure" aria-pressed="false">Infrastructure</button></div>
+    <div id="project-grid" class="project-grid"></div><noscript><p>JavaScript enables project filtering. <a href="https://github.com/ai4se4ai-lab">Explore the research repositories on GitHub</a>, or download the <a href="assets/02_Curriculum_Vitae.pdf">CV</a> for the complete artifact list.</p></noscript>
+    <section class="repository-directory" id="directory" aria-labelledby="directory-title"><h3 id="directory-title">Public repository directory</h3><p class="small">Explore all public repositories, including clearly labeled forks.</p><div class="directory-tools"><label for="repo-search">Find a repository<input id="repo-search" type="search" placeholder="Search by name, description, or language…"></label><label for="repo-kind">Repository type<select id="repo-kind"><option value="all">All repositories</option><option value="original">Original repositories</option><option value="fork">Forks</option></select></label></div><p id="repo-status" class="small" aria-live="polite">Loading repository directory…</p><div id="repo-list" class="repo-list"></div><a class="text-link" href="https://github.com/ai4se4ai-lab?tab=repositories" target="_blank" rel="noopener">View account on GitHub ↗</a></section>
+  </div></section>
+  <section class="section-wrap section" id="publications">
+    <div class="section-heading split-heading"><div><p class="eyebrow">03 / PUBLICATIONS & RECOGNITION</p><h2>A record of <span class="serif">inquiry.</span></h2></div><a class="text-link" href="assets/02_Curriculum_Vitae.pdf" target="_blank" rel="noopener">Full publication record ↗</a></div>
+    <div class="award"><span class="award-icon">✳</span><div><strong>ACM SIGSOFT Distinguished Paper Award</strong><span>MODELS 2021 · Replay-based regression testing of distributed reactive systems</span></div><span>2021</span></div>
+    <div class="publication-tabs" role="group" aria-label="Filter publications"><button class="pub-filter active" data-pub="published" aria-pressed="true">Published & accepted</button><button class="pub-filter" data-pub="review" aria-pressed="false">Under review & submitted</button></div><div id="publication-list"></div><p class="small publication-note">Publication and submission statuses follow the supplied CV (October 2026). Submitted work is listed separately from published and accepted research.</p>
+  </section>
+  <section class="teaching-section" id="teaching"><div class="section-wrap section teaching-layout"><div><p class="eyebrow">04 / TEACHING & MENTORSHIP</p><h2>Build understanding.<br><span class="serif">Then build what’s next.</span></h2><p>I teach software engineering, programming, and software delivery, and advise students working at the intersection of AI and software systems.</p><a class="text-link" href="mailto:majid.babaei@ufv.ca">Discuss research collaboration ↗</a><div class="teaching-stat"><strong>9</strong><span>sections at UFV<br>Fall 2025–Fall 2026</span><strong>237</strong><span>course enrolments<br>completed & current terms</span></div></div><div><p class="eyebrow">AT THE UNIVERSITY OF THE FRASER VALLEY</p><div class="course"><span>COMP 370</span><h3>Software Engineering</h3></div><div class="course"><span>COMP 481</span><h3>Functional & Logic Programming</h3></div><div class="course"><span>COMP 155</span><h3>Object-oriented Programming</h3></div><div class="course"><span>CIS 285</span><h3>End User Training & Support</h3></div><p class="small">Earlier teaching: McGill, Concordia, Queen’s, and St. Lawrence College. Enrolments count course registrations, not unique students.</p></div></div>
+    <div class="section-wrap mentorship"><h3>Research grows through collaboration.</h3><p>Collaborative co-supervision includes AI-powered fault localization, context engineering, and CodeFaithBench. Completed master’s co-advising at Brock includes Ghazal Khodabandeh (ICPE 2025) and Alireza Ezaz (TAAF, ICSE 2026), with supervisor Prof. Naser Ezzati-Jivan.</p></div>
+  </section>
+  <section class="section-wrap section" id="about"><div class="section-heading"><p class="eyebrow">05 / BACKGROUND</p><h2>Research grounded<br>in <span class="serif">engineering.</span></h2><p>I bring experience across academic research, teaching, software development, and DevOps. I currently serve as Chair of Industry Partnerships in UFV’s School of Computing.</p></div><div class="about-grid"><div><h3 class="list-heading">Academic appointments</h3><ol class="timeline"><li><span>2025 — PRESENT</span><h3>Assistant Professor, Tenure-Track</h3><p>University of the Fraser Valley · School of Computing</p></li><li><span>2024 — PRESENT</span><h3>Associate Member</h3><p>McGill University · Electrical and Computer Engineering</p></li><li><span>2023 — 2025</span><h3>Faculty Lecturer → Assistant Professor (Professional)</h3><p>McGill University · School of Continuing Studies<br>Academic program coordination and curriculum development</p></li><li><span>2022 — 2023</span><h3>Postdoctoral Fellow & Visiting Researcher</h3><p>Concordia University / McGill University</p></li></ol></div><div><h3 class="list-heading">Education</h3><div class="education"><span>2021 · QUEEN’S UNIVERSITY</span><h3>Ph.D. in Software Engineering</h3><p>Regression testing of distributed real-time embedded systems in model-driven development.</p></div><div class="education"><span>2017 · TU CHEMNITZ</span><h3>M.Sc. in Automotive Software Engineering</h3><p>Pattern recognition and big-data analysis for distributed embedded systems.</p></div><div class="education"><span>2012 · SHAHROOD UNIVERSITY OF TECHNOLOGY</span><h3>B.Eng. in Computer Engineering</h3></div><div class="industry"><p class="eyebrow">FROM INDUSTRY TO ACADEMIA</p><p>Software development and DevOps experience at Imaginary Spaces, National Research Council Canada, Robert Bosch, EPAK, and Farazpajohan.</p></div></div></div>
+    <details class="service"><summary>Academic service <span>+</span></summary><div class="service-grid"><div><h3>Conference organization</h3><p>CASCON 2026 · Publicity Co-Chair<br>ICSE 2025 · Proceedings Co-Chair<br>SEAMS 2025 · Publicity Co-Chair<br>SERP4IoT 2025 · Publicity Chair</p></div><div><h3>Program committees</h3><p>ASE 2026 · Tools and Datasets<br>FSE 2026 · Student Research Competition<br>ASE 2025 · Tool Demonstrations<br>MODELS 2025 · Workshops<br>ICPE 2025 · Data Challenge<br>ASE 2024 · Artifact Evaluation</p></div></div></details>
+  </section>
+  <section class="contact-section" id="contact"><div class="section-wrap"><p class="eyebrow"><span class="status-dot"></span> 06 / START A CONVERSATION</p><h2>Better software.<br><span class="serif">Built on evidence.</span></h2><div class="contact-bottom"><p>Interested in reliable AI, research collaboration,<br>or connecting industry and academia? Let’s talk.</p><a href="mailto:majid.babaei@ufv.ca">majid.babaei@ufv.ca <span>↗</span></a></div></div></section>
+</main>
+<footer class="section-wrap"><a class="identity footer-identity" href="#home">mb.</a><span>© <span id="year">2026</span> Majid Babaei</span><a href="https://github.com/ai4se4ai-lab" target="_blank" rel="noopener">GitHub ↗</a><a href="assets/02_Curriculum_Vitae.pdf" target="_blank" rel="noopener">CV ↗</a><a class="back-top" href="#home">Back to top ↑</a></footer>
+</body>
+</html>

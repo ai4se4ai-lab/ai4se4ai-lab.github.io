@@ -1,0 +1,285 @@
+%% =====================================================================
+%% Curriculum Vitae -- Majid Babaei -- UBC ECE 2026
+%% Self-contained CV; all content and styling are maintained in this file.
+%% =====================================================================
+\documentclass[10pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage[scaled=0.92]{helvet}
+\usepackage[margin=0.8in,headheight=14pt,footskip=24pt]{geometry}
+\usepackage{microtype}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{titlesec}
+\usepackage[shortlabels]{enumitem}
+\usepackage{array,tabularx}
+\usepackage{booktabs}
+\usepackage{fancyhdr,lastpage}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdfauthor={Majid Babaei},pdftitle={Curriculum Vitae},pdfsubject={UBC ECE Assistant Professor Application}}
+
+\newif\iffinal \finaltrue
+\iffinal
+  \newcommand{\confirm}[1]{#1}
+\else
+  \newcommand{\confirm}[1]{\textcolor{BrickRed}{#1}}
+\fi
+
+\definecolor{mbblue}{RGB}{25,55,95}
+\titleformat{\section}{\sffamily\large\bfseries\color{mbblue}}{}{0em}{}[{\color{mbblue}\titlerule}]
+\titleformat{\subsection}{\sffamily\normalsize\bfseries}{}{0em}{}
+\titlespacing*{\section}{0pt}{1.0em}{0.45em}
+\titlespacing*{\subsection}{0pt}{0.55em}{0.2em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.2em}
+\setlist[itemize]{leftmargin=1.2em,itemsep=0.1em,topsep=0.15em}
+\setlist[enumerate]{leftmargin=2.1em,itemsep=0.25em,topsep=0.15em}
+
+% entry: {title}{dates}{place}{details}
+\newcommand{\entry}[4]{\textbf{#1}\hfill\textbf{#2}\\ #3\ifx&#4&\else\\[-1pt]{\small #4}\fi\par\vspace{0.15em}}
+% Academic timeline: dates form a quiet left column; role and institution lead.
+\newcommand{\academicentry}[4]{%
+ \begingroup\setlength{\parskip}{0pt}%
+ \noindent\begin{minipage}[t]{2.65cm}\vspace{0pt}\raggedright
+ {\sffamily\fontsize{9}{11}\selectfont\color{black!65}#2\par}
+ \end{minipage}\hspace{0.5cm}%
+ \begin{minipage}[t]{\dimexpr\textwidth-3.15cm\relax}\vspace{0pt}\raggedright
+ {\sffamily\fontsize{10.5}{12.5}\selectfont\bfseries\color{mbblue}#1\par}
+ \vspace{1pt}{\normalsize #3\par}
+ \vspace{2pt}{\fontsize{9.2}{11.3}\selectfont\color{black!80}#4\par}
+ \end{minipage}\par\endgroup\vspace{5pt}}
+\newcommand{\educationentry}[4]{\academicentry{#1}{#2}{#3}{#4}}
+\newcommand{\me}{\textbf{M.~Babaei}}
+\newcommand{\cvtablehead}[1]{{\color{mbblue}\sffamily\bfseries #1}}
+% One style for every CV table: readable type, open rules, aligned headings.
+\newenvironment{cvtable}{%
+ \begingroup\fontsize{9.2}{11.3}\selectfont
+ \setlength{\tabcolsep}{5pt}\renewcommand{\arraystretch}{1.16}
+%
+}{\par\endgroup}
+\emergencystretch=1.5em
+\raggedbottom
+
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\sffamily Majid Babaei\quad Curriculum Vitae}
+\fancyfoot[R]{\footnotesize\sffamily \thepage\ / \pageref{LastPage}}
+
+\begin{document}
+\begin{center}
+{\sffamily\Huge\bfseries\color{mbblue} Majid Babaei, Ph.D.}\\[4pt]
+Assistant Professor (Tenure-Track), School of Computing, University of the Fraser Valley\\[2pt]
+\href{mailto:majid.babaei@ufv.ca}{majid.babaei@ufv.ca}\quad\textbar\quad
+\href{https://majidbabaei.com}{majidbabaei.com}\quad\textbar\quad
+\href{https://github.com/ai4se4ai-lab}{github.com/ai4se4ai-lab}\\[2pt]
+Vancouver, British Columbia, Canada\quad\textbar\quad +1-416-830-2517\\[2pt]
+
+\end{center}
+
+\section{Research Profile}
+My research focuses on making AI-assisted software engineering reliable and its results checkable. My recent work develops verifiable agent skills and traceable agent coordination (SkillSpec, AgentM2M, AutoM2M), alongside checked experimental infrastructure (use-hpc, RES-AI). Complementary projects use evidence from code repositories and execution traces to support software testing, maintenance, and diagnosis. Explicit contracts and provenance connect these projects by making automated decisions easier to validate and failures easier to explain.
+
+\section{Academic Appointments}
+\academicentry{Assistant Professor (Tenure-Track)}{Aug 2025--present}{University of the Fraser Valley\quad School of Computing}{Chair of Industry Partnerships.}
+\academicentry{Associate Member}{Nov 2024--present}{McGill University\quad Electrical and Computer Engineering}{Adjunct Professorship application under review.}
+\academicentry{Assistant Professor (Professional)}{Jan 2024--Jul 2025}{McGill University\quad School of Continuing Studies}{Academic Program Coordinator, Certificate in Computers and Information Technology.}
+\academicentry{Faculty Lecturer}{Jan 2023--Jan 2024}{McGill University\quad School of Continuing Studies}{Academic Program Coordinator, Micro-credential in Digital Product Management and Emerging Technologies.}
+\academicentry{Postdoctoral Research Fellow}{2022--2023}{Concordia University, Montreal}{Software robustness analysis. Supervisor: Prof.\ Yann-Ga\"el Gu\'eh\'eneuc.}
+\academicentry{Visiting Researcher}{2022--2023}{McGill University}{Knowledge-graph explainability for information retrieval. Host: Prof.\ D\'aniel Varr\'o; industry project with Aggregate Intelligence.}
+
+\section{Education}
+\educationentry{Ph.D.\ in Software Engineering}{2018--Dec 2021}{Queen's University, Kingston, Ontario}{\textbf{Thesis:} \emph{Regression Testing of Distributed Real-Time Embedded Systems in the Context of Model-Driven Development}.\newline\textbf{Supervisor:} Prof.\ Juergen Dingel.}
+\educationentry{M.Sc.\ in Automotive Software Engineering}{2015--Nov 2017}{Technische Universit\"at Chemnitz, Germany}{\textbf{Thesis:} \emph{Conception and implementation of a pattern recognition system for analyzing Big Data from distributed embedded AMRA boxes}.\newline\textbf{Supervisor:} Prof.\ Martin Gaedke.}
+\educationentry{B.Eng.\ in Computer Engineering}{2007--May 2012}{Shahrood University of Technology, Iran}{\textbf{Supervisor:} Ali Dostmohammadi.}
+
+\newpage
+\section{Awards and Recognition}
+ACM SIGSOFT Distinguished Paper Award, MODELS 2021.\\
+Artifacts Available and Evaluated--Reusable badges, MODELS 2020 research paper.
+
+\section{Publications}
+\subsection{Refereed journal articles published or accepted}
+\begin{enumerate}[label={[J\arabic*]}]
+\item \me\ and Y.-G.\ Gu\'eh\'eneuc. RATEN: An efficient robustness analysis and test enhancement framework for state machines. \emph{Software and Systems Modeling}, 2026. Published.
+\item \me, N.\ Ezzati-Jivan, F.\ Hendijani Fard, and A.\ Hamou-Lhadj. RapidPay: Identifying and prioritizing self-admitted technical debt chains for effective debt management in software systems. \emph{Empirical Software Engineering}. \textbf{Accepted}.
+\item \me\ and J.\ Dingel. Efficient regression testing of distributed real-time reactive systems in the context of model-driven development. \emph{Software and Systems Modeling}, 22(5):1565--1587, 2023. doi:10.1007/s10270-023-01086-5.
+\item \me. A novel text and image encryption method based on chaos theory and DNA computing. \emph{Natural Computing}, 12(1):101--107, 2013.
+\end{enumerate}
+
+\subsection{Refereed conference and workshop papers}
+\begin{enumerate}[label={[C\arabic*]}]
+\item \me\ and A.\ Heydarnoori. SkillSpec: A formally verifiable specification format for composing agent skills. \emph{49th IEEE/ACM International Conference on Software Engineering (ICSE)}, 2027. \textbf{Research Track; to appear.}
+\item A.\ Ezaz, G.\ Khodabandeh, \me, and N.\ Ezzati-Jivan. TAAF: A trace abstraction and analysis framework synergizing knowledge graphs and LLMs. \emph{48th IEEE/ACM ICSE}, 2026. doi:10.1145/3744916.3787832.
+\item \me, N.\ Ezzati-Jivan, and L.\ Wei. SIKG: A semantic impact knowledge graph approach for adaptive test selection and prioritization. \emph{ICSE Companion, Poster Track}, 2026. doi:10.1145/3774748.3795655.
+\item G.\ Khodabandeh, A.\ Ezaz, \me, and N.\ Ezzati-Jivan. Utilizing graph neural networks for effective link prediction in microservice architectures. \emph{16th ACM/SPEC International Conference on Performance Engineering (ICPE)}, pp.\ 19--30, 2025.
+\item P.\ Chakraborty, \me, L.\ Tahmooresnejad, and N.\ Ezzati-Jivan. MemAdapt: Adaptive memory usage monitoring using irregularly sampled data. \emph{34th International Conference on Collaborative Advances in Software and Computing (CASCON)}, 2024.
+\item \me. Communication semantics for IoT-aware business process management systems. \emph{6th IEEE/ACM International Workshop on Software Engineering Research and Practices for the IoT (SERP4IoT)}, 2024.
+\item \me\ and M.\ Ben-Attia. ra4xstate: An efficient quantitative robustness analysis approach for statecharts. \emph{5th IEEE/ACM SERP4IoT}, pp.\ 46--53, 2023.
+\item \me\ and J.\ Dingel. Efficient replay-based regression testing for distributed reactive systems in the context of model-driven development. \emph{24th ACM/IEEE International Conference on Model Driven Engineering Languages and Systems (MODELS)}, pp.\ 89--100, 2021. \textbf{ACM SIGSOFT Distinguished Paper Award.}
+\item \me\ and J.\ Dingel. MRegTest: A replay-based regression testing tool for distributed UML-RT models. \emph{MODELS Companion}, pp.\ 620--624, 2021.
+\item \me, M.\ Bagherzadeh, and J.\ Dingel. Efficient reordering and replay of execution traces of distributed reactive systems in the context of model-driven development. \emph{23rd ACM/IEEE MODELS}, pp.\ 285--296, 2020. \textbf{Artifacts Available and Evaluated--Reusable.}
+\item \me, M.\ Bagherzadeh, and J.\ Dingel. MReplayer: A trace replayer of distributed UML-RT models. \emph{MODELS Companion}, 2020.
+\item \me, K.\ Jahed, and J.\ Dingel. Solving the RoboSoccer challenge problem with UML-RT and Papyrus-RT. \emph{MODELS Companion}, 2019.
+\end{enumerate}
+
+\newpage
+\section{Submitted Manuscripts and Current Research}
+\subsection{Under review or submitted}
+\begin{enumerate}[label={[S\arabic*]}]
+\item \me. \textbf{use-hpc: Agent-configured, statically checked Slurm pipelines for large-scale GPU experiments}. \emph{ASE} journal, under review.
+\item \me. \textbf{RES-AI: Evidence-bound readiness for AI software engineering experiments on shared HPC infrastructure}. Submitted to the \emph{ASE} journal.
+\item \me, S.\ Farshidi, O.\ Adesina, N.\ Ezzati-Jivan, and L.\ Wei. \textbf{AgentM2M: M2M transformations for agentic collaborations in software engineering}. Submitted to \emph{ICSE 2027, New Ideas and Emerging Results (NIER)}.
+\item \me. \textbf{When the team writes itself: Reliable and traceable LLM-assembled agent teams through checked model transformations} (AutoM2M). Submitted to \emph{Empirical Software Engineering}.
+\item Z.\ Zhou, R.\ Chen, N.\ Yun, J.\ Chen, Y.\ Liu, \me, and L.\ Wei. \textbf{Understanding and detecting login flow errors in Android applications} (LIFTDroid). \emph{IEEE Transactions on Software Engineering}, under review.
+\item S.\ Farshidi, \me, and B.\ Tekinerdogan. \textbf{Mining design decisions and rationale evidence across research software projects}. Submitted to \emph{Mining Software Repositories (MSR) 2027}.
+\item N.\ Ezzati-Jivan, M.\ Panahandeh, and \me. \textbf{Was it my code? Evidence-based performance diagnosis for CI on shared GPUs}. Submitted to \emph{ICSE 2027, NIER}.
+\end{enumerate}
+
+\section{Research Software and Artifacts}
+\begin{cvtable}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.9cm}>{\raggedright\arraybackslash}p{2.8cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{4.4cm}@{}}
+\toprule
+\cvtablehead{Year} & \cvtablehead{Software or artifact} & \cvtablehead{Purpose and contribution} & \cvtablehead{GitHub repository}\\\midrule
+2027 & \textbf{SkillSpec} & Verifiable agent-skill contracts and composition repair. & \href{https://github.com/ai4se4ai-lab/swe-multiskillsbench}{\nolinkurl{ai4se4ai-lab/}\allowbreak\nolinkurl{swe-multiskillsbench}}\\\addlinespace[3pt]
+2027 & \textbf{AgentM2M} & Typed agent hand-offs and persistent transformation traces. & \href{https://github.com/ai4se4ai-lab/AgentM2M}{\nolinkurl{ai4se4ai-lab/}\allowbreak\nolinkurl{AgentM2M}}\\\addlinespace[3pt]
+2026 & \textbf{RATEN / ra4xstate} & State-machine robustness analysis and test enhancement. & \href{https://github.com/ai4se4ai-lab/RATEN-ra4xstate}{\nolinkurl{ai4se4ai-lab/}\allowbreak\nolinkurl{RATEN-ra4xstate}}\\\addlinespace[3pt]
+2026 & \textbf{TAAF / TraceQA-100} & Trace knowledge-graph analysis and question benchmark. & \href{https://github.com/Alireza-Ezaz/TAAF}{\nolinkurl{Alireza-Ezaz/}\allowbreak\nolinkurl{TAAF}}\\\addlinespace[3pt]
+2026 & \textbf{SIKG} & Semantic impact analysis for test selection and prioritization. & \href{https://github.com/ai4se4ai-lab/SIKG}{\nolinkurl{ai4se4ai-lab/}\allowbreak\nolinkurl{SIKG}}\\\addlinespace[3pt]
+2026* & \textbf{RapidPay} & Technical-debt chains and SATD Impact Ripple ranking. & \href{https://github.com/ai4se4ai-lab/RapidPay}{\nolinkurl{ai4se4ai-lab/}\allowbreak\nolinkurl{RapidPay}}\\\addlinespace[3pt]
+2026* & \textbf{AutoM2M} & Checked agent-team composition, failure attribution, and repair. & \href{https://github.com/ai4se4ai-lab/M2MColab}{\nolinkurl{ai4se4ai-lab/}\allowbreak\nolinkurl{M2MColab}}\\\addlinespace[3pt]
+2026* & \textbf{use-hpc} & Checked Slurm experiment graphs, runtime guards, and audits. & \href{https://github.com/ai4se4ai-lab/use-hpc}{\nolinkurl{ai4se4ai-lab/}\allowbreak\nolinkurl{use-hpc}}\\\addlinespace[3pt]
+2026* & \textbf{RES-AI} & Readiness checks for coverage, freshness, and memory headroom. & \href{https://github.com/ai4se4ai-lab/RES-AI}{\nolinkurl{ai4se4ai-lab/}\allowbreak\nolinkurl{RES-AI}}\\\addlinespace[3pt]
+2021 & \textbf{MRegTest} & Replay-based regression testing for distributed UML-RT models. & \href{https://github.com/MajidGitHubRepos/MRegTest}{\nolinkurl{MajidGitHubRepos/}\allowbreak\nolinkurl{MRegTest}}\\\addlinespace[3pt]
+2020 & \textbf{MReplayer} & Deterministic execution-trace replay for distributed UML-RT models. & \href{https://github.com/MajidGitHubRepos/MReplayer}{\nolinkurl{MajidGitHubRepos/}\allowbreak\nolinkurl{MReplayer}}\\\bottomrule
+\end{tabularx}
+\par\vspace{2pt}{\fontsize{8}{9.5}\selectfont Years identify publication or target conference years; * marks current project activity (2026) where no publication year is assigned. Submitted work and prototypes are not publications.}
+\end{cvtable}
+
+\newpage
+\section{Teaching and Educational Leadership}
+\subsection{University of the Fraser Valley}
+\begin{cvtable}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{1.85cm}>{\raggedright\arraybackslash}p{1.85cm}>{\raggedright\arraybackslash}Xr@{}}
+\toprule
+\cvtablehead{Term} & \cvtablehead{Course} & \cvtablehead{Title and sections} & \cvtablehead{Enrolment}\\\midrule
+Fall 2025 & COMP 370 & Software Engineering; one section & 26\\
+& COMP 481 & Functional and Logic Programming; one section & 32\\\addlinespace[3pt]
+Winter 2026 & COMP 370 & Software Engineering; two sections & 25 + 25\\\addlinespace[3pt]
+Fall 2026 & COMP 370 & Software Engineering; two sections & 25 + 27\\
+(current) & CIS 285 & End User Training and Support; one section & 23\\
+& COMP 481 & Functional and Logic Programming; one section & 28\\
+& COMP 155 & Object-oriented Programming; one section & 26\\\bottomrule
+\end{tabularx}
+\end{cvtable}
+\vspace{3pt}
+\textbf{Total:} nine sections, 237 course enrolments across completed and current terms (not unique students).
+
+\subsection{Earlier teaching and program coordination}
+\begin{itemize}
+\item \textbf{McGill ECE:} ECSE 437, Software Delivery (Fall 2022 and Fall 2023); software-project instruction and structured peer feedback.
+\item \textbf{McGill SCS:} CCCS 300, Programming Techniques 1 (Winter 2024 and 2025); CCCS 301, Programming Techniques 2 (Fall 2023, Winter 2024 and 2025); CCCS 330, Database Design and Business Applications Development (Summer 2023); CCCS 610, Digital Thinking for Data Analysis (Fall 2024).
+\item \textbf{Program coordination, McGill SCS:} Certificate in Computers and Information Technology; Micro-credential in Digital Product Management and Emerging Technologies. Curriculum review and program redesign.
+\item \textbf{Concordia:} COMP 218, Fundamentals of Programming (Fall 2021 and Winter 2023).
+\item \textbf{Queen's:} ELEC 377, Operating Systems (Fall 2021); course-lecturer and teaching-assistant experience during the doctoral period.
+\item \textbf{St.\ Lawrence College:} applied AI and machine-learning teaching (2020--2022).
+\item Additional teaching areas across appointments include data-analytics programming with R and Python.
+\end{itemize}
+
+\section{Student Supervision and Academic Advising}
+\textbf{Current collaborative co-supervision:} with Abbas Heydarnoori, two graduate students and one undergraduate on AI-powered fault localization and context engineering; with Fatemeh Hendijani Fard, graduate and undergraduate students on collaborative projects including \emph{CodeFaithBench}, a new benchmark project on the faithfulness of LLM code explanations.
+
+\subsection{Completed Master's theses co-advised}
+\textit{Brock University; academic advisor/co-advisor, with supervisor Prof.\ Naser Ezzati-Jivan.}
+\begin{itemize}
+\item \textbf{Ghazal Khodabandeh} (Jan 2024--Sep 2025). \emph{Link Prediction on Distributed Systems}. Publication: ICPE 2025. Subsequent position: Research Assistant, York University.
+\item \textbf{Alireza Ezaz} (Jan 2024--Sep 2025). \emph{TAAF: A Trace Abstraction and Analysis Framework Synergizing Knowledge Graphs and LLMs}. Publication: ICSE 2026. Subsequent position: Data Quality Specialist, Cohere.
+\end{itemize}
+\subsection{Completed undergraduate and project advising}
+\begin{itemize}
+\item \textbf{Brock, Jan 2024--Apr 2025:} Bilal Bilal (semantic code coverage using topic models and LLMs); Yuvraj Sehgal (LLM-generated README files from source code).
+\item \textbf{McGill, Jan--Apr 2024:} Felicia Sun (review of AI-enabled continuous testing in DevOps); Zachary Hayden (LLMs and technical debt in DevOps).
+\item \textbf{McGill, Sep--Dec 2023:} Benakmoum Amine, Ammar Ryad, Zakaria Bouhemhem (DAPPER subscription application).
+\item \textbf{McGill, Sep--Dec 2022:} Michael Buchar, Ege Karadibak, Ezra Gomolin, Dominic Chan (decentralized NFT-locking application).
+\end{itemize}
+
+\newpage
+\section{Research Funding and Proposal Development}
+\begin{cvtable}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{2.3cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}X@{}}
+\toprule
+\cvtablehead{Program or proposal} & \cvtablehead{Role} & \cvtablehead{Status} & \cvtablehead{Project and partners}\\\midrule
+\textbf{NSERC Discovery Grant} (2026) & Sole applicant & Under review & \emph{Checkable Abstractions for Trustworthy AI in Distributed Software Systems}. Five-year program on grounded diagnosis, calibrated forecasts, verified teams, and checked evaluation.\\\addlinespace[3pt]
+\textbf{Amazon Research Awards (ARA)} & Principal Investigator & Under review & \emph{MAPLE: Model-Driven Engineering of Access Permissions for AI Agents}. Co-PI: Abbas Heydarnoori (Bowling Green State University). Requested: USD \$70,000 cash and USD \$18,200 in AWS Promotional Credits; proposed period June 2027--May 2028.\\\addlinespace[3pt]
+\textbf{Mitacs Accelerate} & Principal Investigator & Under review & Applied AI and educational technology with Enya-Learning; proposed research internships.\\\addlinespace[3pt]
+\textbf{CIRA Net Good Grants} & Applicant / UFV lead & Not funded & AI-assisted analysis of internet affordability and Indigenous-connectivity policies, with Caseway and Indigenous/community participants.\\\addlinespace[3pt]
+\textbf{DND IDEaS Innovation Networks} & UFV lead / initial recipient & Not funded & \emph{ARMOR: Agnostic Real-time Monitoring and Operator Trust Repair Layer}. McGill and Caseway; verification, resilience testing, human--AI trust, and secure data fusion.\\\addlinespace[3pt]
+\textbf{Community-based experiential learning} & Contributor & Under review & UFV CECE and Ken Ryu Jujutsu Society; proposed student development of a mobile training application for Fall 2026.\\\bottomrule
+\end{tabularx}
+\end{cvtable}
+
+\section{Industry Partnerships and Knowledge Mobilization}
+\textbf{Chair of Industry Partnerships, School of Computing, UFV (Fall 2025--present).}
+Develop relationships supporting experiential learning, curriculum relevance, applied research, and professional pathways. Selected documented activities:
+\begin{itemize}
+\item \textbf{Tech Panel 2026}, March 12, 2026: organized with the Computing Student Association and support from colleagues and staff. Panel and networking session with Colin Schmidt (Zynim), Meer Anwar (PixelPaddle), Mason Paquette (Kwixand), and Stan Engelbrecht (ADAMnetworks).
+\item \textbf{Industry events, Fall 2025:} organized a cloud-computing talk by Craig Slack (Invero CEO and UFV alumnus), with staff support; co-managed a technical-interview event with Richard Clark (Crafty Penguins) and UFV career-education partners.
+\item \textbf{Curriculum integration, 2025--2026:} invited Nathan Leggatt (Intuit Mailchimp) into COMP 370; facilitated a Caseway engineer's presentation of Synthium requirements in Winter 2026.
+\item \textbf{External Program Advisory Committee:} chaired the November 27, 2025 meeting; advanced Terms of Reference updates, systematic industry feedback, alumni engagement, and discussion on bridging research and industry.
+\item \textbf{Exploratory collaboration:} AWS Canada Innovation Sandbox; HoloFi; CropVue Technologies; ROSC; and an Altifarm introduction connecting UFV software and hardware expertise. Discussions concerned research scope and student opportunities.
+\item \textbf{Partnership evaluation:} assessed EC-Council and Woddy opportunities; did not proceed where curriculum or grant fit was insufficient.
+\item \textbf{Community proposal development:} contributed to the Indigenous-connectivity policy proposal and the CECE/Ken Ryu experiential-learning proposal; proposed deliverables are distinct from completed outcomes.
+\end{itemize}
+
+\textbf{Earlier research connections:} Aggregate Intelligence (2022), explainable information retrieval, including mentoring three McGill ECE undergraduate researchers in Summer 2022; Humanitas (2022--2023), robustness analysis. Organizer, McGill SCS Tech Trends Speaker Series, Winter 2025.
+
+\newpage
+\section{Professional and Institutional Service}
+\subsection{Conference organization}
+\begin{cvtable}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{1.1cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{6.3cm}@{}}
+\toprule
+\cvtablehead{Year} & \cvtablehead{Conference} & \cvtablehead{Role} & \cvtablehead{Official page}\\\midrule
+2026 & \textbf{CASCON} & Publicity Co-Chair & \href{https://conf.researchr.org/committee/cascon-2026/cascon-2026-organizing-committee}{\textcolor{mbblue}{\nolinkurl{conf.researchr.org/.../cascon-2026}}}\\
+2025 & \textbf{ICSE} & Proceedings Co-Chair & \href{https://conf.researchr.org/committee/icse-2025/icse-2025-organizing-committee}{\textcolor{mbblue}{\nolinkurl{conf.researchr.org/.../icse-2025}}}\\
+2025 & \textbf{SEAMS} & Publicity Co-Chair & \href{https://conf.researchr.org/committee/seams-2025/seams-2025-organizing-committee}{\textcolor{mbblue}{\nolinkurl{conf.researchr.org/.../seams-2025}}}\\
+2025 & \textbf{SERP4IoT} & Publicity Chair & \href{https://conf.researchr.org/committee/icse-2025/serp4iot-2025-papers-program-committee}{\textcolor{mbblue}{\nolinkurl{conf.researchr.org/.../icse-2025}}}\\\bottomrule
+\end{tabularx}
+\end{cvtable}
+\subsection{Program committees}
+\begin{cvtable}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{1.1cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{6.3cm}@{}}
+\toprule
+\cvtablehead{Year} & \cvtablehead{Conference} & \cvtablehead{Track} & \cvtablehead{Official page}\\\midrule
+2026 & \textbf{ASE} & Tools and Datasets & \href{https://conf.researchr.org/committee/ase-2026/ase-2026-tools-and-data-sets-program-committee}{\textcolor{mbblue}{\nolinkurl{conf.researchr.org/.../ase-2026}}}\\
+2026 & \textbf{FSE} & Student Research Competition & \href{https://conf.researchr.org/committee/fse-2026/fse-2026-student-research-competition-program-committee}{\textcolor{mbblue}{\nolinkurl{conf.researchr.org/.../fse-2026}}}\\
+2025 & \textbf{ASE} & Tool Demonstrations & \href{https://conf.researchr.org/committee/ase-2025/ase-2025-tool-demonstration-track-nier-program-committee}{\textcolor{mbblue}{\nolinkurl{conf.researchr.org/.../ase-2025}}}\\
+2025 & \textbf{MODELS} & Workshops & \href{https://conf.researchr.org/committee/models-2025/models-2025-workshops-program-committee}{\textcolor{mbblue}{\nolinkurl{conf.researchr.org/.../models-2025}}}\\
+2025 & \textbf{ICPE} & Data Challenge & \href{https://icpe2025.spec.org/}{\textcolor{mbblue}{\nolinkurl{icpe2025.spec.org}}}\\
+2024 & \textbf{ASE} & Artifact Evaluation & \href{https://conf.researchr.org/committee/ase-2024/ase-2024-artifact-evaluation-track-fatemeh-}{\textcolor{mbblue}{\nolinkurl{conf.researchr.org/.../ase-2024}}}\\\bottomrule
+\end{tabularx}
+\end{cvtable}
+\subsection{Institutional and professional committees}
+\begin{itemize}
+\item Chair of Industry Partnerships, School of Computing, UFV (2025--present).
+\item SCS Strategic Planning Committee, McGill University (Sep 2023--Sep 2026).
+\item Working Group on Revisions to the Guide to Reporting Alleged Violations of Academic Integrity, McGill SCS (Jul 2023--Mar 2025).
+\item Professional Development Committee, Canadian Association for University Continuing Education (Apr 2023--Dec 2025).
+\end{itemize}
+
+\section{Industry Experience}
+\entry{Senior Software Developer and DevOps Engineer}{Nov 2021--Mar 2023}{Imaginary Spaces, Canada}{Row64 software development and debugging; CI/CD workflows for Pipeline-In-Box readers and writers.}
+\entry{Software Developer (Internship)}{May--Sep 2021}{National Research Council Canada, Ottawa}{Representation learning for cybersecurity log data; advanced persistent threat detection for large-scale databases.}
+\entry{Software Developer}{Jan--Dec 2017}{Robert Bosch GmbH, Germany}{Bosch IoT/AMRA datasets; React and React Native monitoring applications; log analysis for real-time embedded devices; customizable analysis workspaces.}
+\entry{Software Developer}{Apr 2015--Dec 2016}{EPAK GmbH, Leipzig, Germany}{VSAT/TV antenna networking platform, simulation, web interfaces, and internal communication system.}
+\entry{Software Developer}{May 2012--Apr 2015}{Farazpajohan, Tehran, Iran}{PKI-based digital-certificate development; Linux networking APIs; modular TCP/SSL server applications.}
+
+\section{Additional Information}
+% R.\ Ramchandani, \me, K.\ Humphrys, and H.\ Stuart. \emph{Our new virtual world: The substance use wellness tool}. Centre for Innovation in Campus Mental Health, 2021.
+
+Interview with Majid Babaei, McGill School of Continuing Studies, August 21, 2023.\\
+\href{https://www.mcgill.ca/continuingstudies/article/interview-majid-babaei}{mcgill.ca/continuingstudies/article/interview-majid-babaei}
+
+\textbf{Languages:} English and Persian (reading, writing, speaking, understanding, and peer review).
+\end{document}
+
