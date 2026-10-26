@@ -41,6 +41,33 @@ The website is a curated portfolio, not a verbatim CV. Record deliberate content
 
 ## History
 
+### 2026-10-26 — Smaller, softer background pattern
+
+- Reduced the geometric repeat from 180px to 64px on desktop and from 148px to 48px on mobile, preserving its proportions.
+- Reduced static line opacity by about 60% and softened pointer-driven coloring across light, dark, teaching, and contact backgrounds.
+- Files: `assets/cursor-magic.css`, `CHANGELOG.md`.
+- Validation: existing programmatic checks passed. Browser visual verification was not performed.
+- Delivery: local working-tree changes; no deployment performed.
+
+### 2026-10-26 — Reference geometric pattern replaces circular cursor glow
+
+- Replaced the dot/grid spotlight with the supplied reference's repeating petal/hexagon motif. Extracted its seamless 101 × 58 repeat into a local SVG stencil, with source attribution in the README.
+- Made the entire pattern visible at rest. Applied the same geometric stencil to cursor-driven gold/teal/violet coloring, so only the pattern lines change color; removed the free-standing circular gradient shape.
+- Retained separate light/dark palettes and a dark-surface teaching treatment. Touch-only and reduced-motion visitors retain the static geometric background.
+- Files: `assets/geometric-pattern.svg`, `assets/cursor-magic.css`, `assets/cursor-magic.js`, `scripts/check-cursor.mjs`, `README.md`, `CHANGELOG.md`.
+- Validation: complete programmatic suite passed, including the shared pattern stencil, always-visible base, local self-contained SVG, motion fallback, theme definitions, pointer coordinates, and cleanup. Browser visual verification was not performed for this update.
+- Delivery: local working-tree changes; no deployment performed. No CV synchronization was needed.
+
+### 2026-10-26 — Cursor-reactive background for light and dark themes
+
+- Added a layered cyan/violet spotlight and a locally revealed dot/grid pattern, inspired by the supplied Cursor Magic example. Applied it to the hero, research, projects, publications, teaching, background, and contact sections.
+- Tuned light and dark palettes separately and retained a dedicated dark-surface palette for teaching. Theme changes update the effect through CSS variables without reinitializing the animation.
+- Kept all decorative layers behind content, excluded from accessibility, and unable to intercept pointer events. Preserved the native cursor.
+- Added time-based pointer smoothing with one animation frame at a time; processing stops after settling. Hide and cancel tracking on scroll, pointer exit, window blur, hidden-page state, or motion/pointer preference changes. Disable tracking on touch-only devices and for reduced motion.
+- Files: `assets/cursor-magic.js`, `assets/cursor-magic.css`, `index.html`, `scripts/check-cursor.mjs`, `scripts/check.mjs`, `README.md`, `CHANGELOG.md`.
+- Validation: JavaScript syntax and the complete programmatic suite passed, including cursor layer hierarchy, coordinates, frame coalescing and settling, section changes, cleanup, reduced-motion/touch guards, and theme palette definitions. Browser visual verification was not performed for this update.
+- Delivery: local working-tree changes; no deployment performed. No CV synchronization was needed.
+
 ### 2026-10-26 — Research map organized by AI/software proximity
 
 - Replaced the alternating project rows with a spatial research constellation. AI-focused systems and experiment infrastructure sit toward AI; SkillSpec, AgentM2M, TAAF, and SIKG bridge the worlds; technical-debt management, robustness, regression testing, and replay sit toward software engineering.

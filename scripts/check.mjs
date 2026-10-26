@@ -105,3 +105,4 @@ for(const stored of [undefined,'light','dark','blocked']){
  if(stored!=='blocked')assert.equal(preference,themeDocument.documentElement.dataset.theme);
 }
 console.log(`Passed: local links, anchors, ${data.repositories.length} repositories, project/publication filters, publication disclosures and citations, tab selection, clipboard success/fallback, repository search, HTML escaping, 11 research nodes, tooltip, detail selection and links, close/focus, pause/resume, and theme preferences.`);
+await import('./check-cursor.mjs');
