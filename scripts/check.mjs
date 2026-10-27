@@ -55,22 +55,29 @@ assert.equal(evaluate('projects.length'),12,'Repository discovery must not chang
 context.duplicateFixture=[{name:'SkillSpec alias',html_url:'https://github.com/AI4SE4AI-LAB/SWE-MULTISKILLSBENCH',fork:false},{name:'fork-example',html_url:'https://github.com/ai4se4ai-lab/fork-example',fork:true}];
 evaluate('integrateRepositoryProjects(duplicateFixture)');assert.equal(count('#project-grid'),0,'Exclude forks and duplicate featured repositories');
 evaluate("integrateRepositoryProjects(repositories); renderProjects('All')");assert.equal(count('#project-grid'),12+extraCount);
-assert.equal(count('#publication-list'),16);
-assert.equal((elements.get('#publication-list').innerHTML.match(/class="publication-disclosure"/g)||[]).length,16);
-assert.equal((elements.get('#publication-list').innerHTML.match(/data-pub-tab="abstract"/g)||[]).length,16);
+assert.equal(count('#publication-list'),15);
+assert.equal((elements.get('#publication-list').innerHTML.match(/class="publication-disclosure"/g)||[]).length,15);
+assert.equal((elements.get('#publication-list').innerHTML.match(/data-pub-tab="abstract"/g)||[]).length,15);
 assert.match(elements.get('#publication-list').innerHTML,/Published paper/);
 assert.match(elements.get('#publication-list').innerHTML,/Download .bib/);
 assert.match(elements.get('#publication-list').innerHTML,/Abstract summary/);
-evaluate("renderPublications('review')");assert.equal(count('#publication-list'),8);
+evaluate("renderPublications('review')");assert.equal(count('#publication-list'),10);
 assert(!elements.get('#publication-list').innerHTML.includes('data-pub-tab="abstract"'));
 assert(!elements.get('#publication-list').innerHTML.includes('Published paper'));
 assert.match(elements.get('#publication-list').innerHTML,/@unpublished/);
 assert.match(elements.get('#publication-list').innerHTML,/Safe Coordination of Untrusted AI Agents/);
 assert(elements.get('#publication-list').innerHTML.includes(`href="${coordinationURL}"`),'Submitted manuscript must link to its artifact');
-const coordinationCitation=evaluate('createBibTeX(submitted[0][2], publicationDetails[submitted[0][2]])');
+const coordinationCitation=evaluate(`createBibTeX(${JSON.stringify(coordinationName+'.')}, publicationDetails[${JSON.stringify(coordinationName+'.')}])`);
 assert.match(coordinationCitation,/^@unpublished\{babaei-safe-coordination,/);
 assert.match(coordinationCitation,/Submitted manuscript\. Target venue: IEEE Transactions on Software Engineering/);
 assert(!evaluate('createBibTeX(submitted[0][2], publicationDetails[submitted[0][2]])').includes('journal ='));
+for(const [prefix,status] of [['RapidPay:','Revision requested'],['Temporal Graph Models','Revision requested'],['use-hpc:','Submitted'],['Understanding and detecting login','Submitted']]){
+ const record=evaluate(`submitted.find(p=>p[2].startsWith(${JSON.stringify(prefix)}))`);
+ assert(record,`Missing manuscript: ${prefix}`);assert.equal(record[0],status);
+ assert(!evaluate(`published.some(p=>p[2].startsWith(${JSON.stringify(prefix)}))`),'Manuscript must not appear as published/accepted');
+ const citation=evaluate(`createBibTeX(${JSON.stringify(record[2])}, publicationDetails[${JSON.stringify(record[2])}])`);
+ assert.match(citation,/^@unpublished/);assert(citation.includes(status));assert(!citation.includes('journal ='));
+}
 for(const group of ['published','submitted']){
  const records=evaluate(`${group}.map(entry => ({title:entry[2],metadata:publicationDetails[entry[2]]}))`);
  for(const {title,metadata} of records){assert(metadata?.author,`Missing citation metadata for ${title}`);assert.match(evaluate(`createBibTeX(${JSON.stringify(title)}, publicationDetails[${JSON.stringify(title)}])`),/^@\w+\{[\w-]+,/);if(metadata.paperUrl)assert(!metadata.paperUrl.includes('github.com'),'Code repositories must not be labeled as published papers');}

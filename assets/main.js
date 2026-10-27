@@ -3,11 +3,11 @@ const projects = [
   ['SkillSpec','Agents','Verifiable agent-skill contracts and composition repair. A specification format for composing agent skills with explicit guarantees.','ICSE 2027 · To appear','swe-multiskillsbench','Contracts · Verification',true],
   ['AgentM2M','Agents','Model-to-model transformations for agent collaboration, with typed hand-offs and persistent transformation traces.','Submitted · ICSE 2027 NIER','AgentM2M','Coordination · Traceability'],
   ['AutoM2M','Agents','Checked agent-team composition, failure attribution, and repair for reliable, traceable LLM-assembled teams.','Submitted · EMSE','M2MColab','Agent teams · Repair'],
-  ['use-hpc','Infrastructure','Agent-configured, statically checked Slurm experiment graphs, runtime guards, and audits for large-scale GPU experiments.','Under review · ASE journal','use-hpc','Slurm · Static checks'],
+  ['use-hpc','Infrastructure','Agent-configured, statically checked Slurm experiment graphs, runtime guards, and audits for large-scale GPU experiments.','Submitted · ASE journal','use-hpc','Slurm · Static checks'],
   ['RES-AI','Infrastructure','Evidence-bound readiness checks for experiment coverage, freshness, and memory headroom on shared HPC infrastructure.','Submitted · ASE journal','RES-AI','HPC · Experiment readiness'],
   ['TAAF / TraceQA-100','Analysis','Execution-trace abstraction and analysis combining knowledge graphs and LLMs, with a trace-question benchmark.','ICSE 2026','https://github.com/Alireza-Ezaz/TAAF','Knowledge graphs · Traces'],
   ['SIKG','Analysis','Semantic impact knowledge graphs for adaptive test selection and prioritization.','ICSE Companion 2026 · Poster','SIKG','Impact analysis · Testing'],
-  ['RapidPay','Analysis','Identifying and prioritizing self-admitted technical-debt chains through impact-ripple ranking.','Accepted · EMSE','RapidPay','Technical debt · Maintenance'],
+  ['RapidPay','Analysis','Identifying and prioritizing self-admitted technical-debt chains through impact-ripple ranking.','Revision requested · EMSE','RapidPay','Technical debt · Maintenance'],
   ['RATEN / ra4xstate','Analysis','Efficient robustness analysis and test enhancement for state machines and statecharts.','SoSyM 2026','RATEN-ra4xstate','State machines · Robustness'],
   ['MRegTest','Analysis','Replay-based regression testing for distributed UML-RT models.','MODELS Companion 2021','https://github.com/MajidGitHubRepos/MRegTest','UML-RT · Regression testing'],
   ['MReplayer','Analysis','Deterministic execution-trace replay for distributed reactive systems in model-driven development.','MODELS Companion 2020','https://github.com/MajidGitHubRepos/MReplayer','Execution traces · Replay'],
@@ -16,7 +16,6 @@ const projects = [
 const published = [
  ['2027','ICSE','SkillSpec: A formally verifiable specification format for composing agent skills.','M. Babaei and A. Heydarnoori. Research Track; to appear.','https://github.com/ai4se4ai-lab/swe-multiskillsbench'],
  ['2026','SoSyM','RATEN: An efficient robustness analysis and test enhancement framework for state machines.','M. Babaei and Y.-G. Guéhéneuc. Published.','https://github.com/ai4se4ai-lab/RATEN-ra4xstate'],
- ['Accepted','EMSE','RapidPay: Identifying and prioritizing self-admitted technical debt chains for effective debt management in software systems.','M. Babaei, N. Ezzati-Jivan, F. Hendijani Fard, and A. Hamou-Lhadj.','https://github.com/ai4se4ai-lab/RapidPay'],
  ['2026','ICSE','TAAF: A trace abstraction and analysis framework synergizing knowledge graphs and LLMs.','A. Ezaz, G. Khodabandeh, M. Babaei, and N. Ezzati-Jivan.','https://doi.org/10.1145/3744916.3787832'],
  ['2026','ICSE Poster','SIKG: A semantic impact knowledge graph approach for adaptive test selection and prioritization.','M. Babaei, N. Ezzati-Jivan, and L. Wei. ICSE Companion, Poster Track.','https://doi.org/10.1145/3774748.3795655'],
  ['2025','ICPE','Utilizing graph neural networks for effective link prediction in microservice architectures.','G. Khodabandeh, A. Ezaz, M. Babaei, and N. Ezzati-Jivan. pp. 19–30.'],
@@ -32,12 +31,14 @@ const published = [
  ['2013','Natural Computing','A novel text and image encryption method based on chaos theory and DNA computing.','M. Babaei. 12(1):101–107.']
 ];
 const submitted = [
+ ["Revision requested","EMSE","Temporal Graph Models for Predictive Monitoring in Microservices.","G. Khodabandeh, A. Ezaz, M. Babaei, and N. Ezzati-Jivan."],
+ ['Revision requested','EMSE','RapidPay: Identifying and prioritizing self-admitted technical debt chains for effective debt management in software systems.','M. Babaei, N. Ezzati-Jivan, F. Hendijani Fard, and A. Hamou-Lhadj.','https://github.com/ai4se4ai-lab/RapidPay'],
  ['Submitted','IEEE TSE','Safe Coordination of Untrusted AI Agents.','M. Babaei.','https://github.com/ai4se4ai-lab/coordination-of-untrusted-ai-agents'],
- ['Under review','ASE journal','use-hpc: Agent-configured, statically checked Slurm pipelines for large-scale GPU experiments.','M. Babaei.','https://github.com/ai4se4ai-lab/use-hpc'],
+ ['Submitted','ASE journal','use-hpc: Agent-configured, statically checked Slurm pipelines for large-scale GPU experiments.','M. Babaei.','https://github.com/ai4se4ai-lab/use-hpc'],
  ['Submitted','ASE journal','RES-AI: Evidence-bound readiness for AI software engineering experiments on shared HPC infrastructure.','M. Babaei.','https://github.com/ai4se4ai-lab/RES-AI'],
  ['Submitted','ICSE 2027 NIER','AgentM2M: M2M transformations for agentic collaborations in software engineering.','M. Babaei, S. Farshidi, O. Adesina, N. Ezzati-Jivan, and L. Wei.','https://github.com/ai4se4ai-lab/AgentM2M'],
  ['Submitted','EMSE','When the team writes itself: Reliable and traceable LLM-assembled agent teams through checked model transformations.','M. Babaei. AutoM2M.','https://github.com/ai4se4ai-lab/M2MColab'],
- ['Under review','IEEE TSE','Understanding and detecting login flow errors in Android applications.','Z. Zhou, R. Chen, N. Yun, J. Chen, Y. Liu, M. Babaei, and L. Wei. LIFTDroid.'],
+ ['Submitted','IEEE TSE','Understanding and detecting login flow errors in Android applications.','Z. Zhou, R. Chen, N. Yun, J. Chen, Y. Liu, M. Babaei, and L. Wei. LIFTDroid.'],
  ['Submitted','MSR 2027','Mining design decisions and rationale evidence across research software projects.','S. Farshidi, M. Babaei, and B. Tekinerdogan.'],
  ['Submitted','ICSE 2027 NIER','Was it my code? Evidence-based performance diagnosis for CI on shared GPUs.','N. Ezzati-Jivan, M. Panahandeh, and M. Babaei.']
 ];

@@ -29,11 +29,14 @@ const publicationDetails = {
   },
   "RapidPay: Identifying and prioritizing self-admitted technical debt chains for effective debt management in software systems.": {
     "key": "babaei-rapidpay",
-    "type": "article",
+    "type": "unpublished",
     "author": "M. Babaei and N. Ezzati-Jivan and F. Hendijani Fard and A. Hamou-Lhadj",
-    "journal": "Empirical Software Engineering",
-    "checked": "2026-10-26",
-    "note": "Accepted for publication; final publication details pending"
+    "checked": "2026-10-27",
+    "note": "Revision requested manuscript. Target venue: Empirical Software Engineering. Status from the author-updated CV, October 27, 2026.",
+    "year": "2026",
+    "sources": [
+      "docs/02_Curriculum_Vitae.tex"
+    ]
   },
   "TAAF: A trace abstraction and analysis framework synergizing knowledge graphs and LLMs.": {
     "key": "babaei-taaf",
@@ -239,21 +242,24 @@ const publicationDetails = {
     "key": "babaei-safe-coordination",
     "type": "unpublished",
     "author": "M. Babaei",
-    "note": "Submitted manuscript. Target venue: IEEE Transactions on Software Engineering. Submission confirmed by the author, October 27, 2026.",
+    "note": "Submitted manuscript. Target venue: IEEE Transactions on Software Engineering. Status from the author-updated CV, October 27, 2026.",
     "checked": "2026-10-27",
     "sources": [
-      "https://github.com/ai4se4ai-lab/coordination-of-untrusted-ai-agents"
-    ]
+      "https://github.com/ai4se4ai-lab/coordination-of-untrusted-ai-agents",
+      "docs/02_Curriculum_Vitae.tex"
+    ],
+    "year": "2026"
   },
   "use-hpc: Agent-configured, statically checked Slurm pipelines for large-scale GPU experiments.": {
     "key": "babaei-use-hpc",
     "type": "unpublished",
     "author": "M. Babaei",
-    "note": "Under review manuscript. Target venue: ASE journal. Status from the author CV, October 2026.",
-    "checked": "2026-10-26",
+    "note": "Submitted manuscript. Target venue: Automated Software Engineering. Status from the author-updated CV, October 27, 2026.",
+    "checked": "2026-10-27",
     "sources": [
       "docs/02_Curriculum_Vitae.tex"
-    ]
+    ],
+    "year": "2026"
   },
   "RES-AI: Evidence-bound readiness for AI software engineering experiments on shared HPC infrastructure.": {
     "key": "babaei-res-ai",
@@ -289,11 +295,12 @@ const publicationDetails = {
     "key": "babaei-liftdroid",
     "type": "unpublished",
     "author": "Z. Zhou and R. Chen and N. Yun and J. Chen and Y. Liu and M. Babaei and L. Wei",
-    "note": "Under review manuscript. Target venue: IEEE TSE. Status from the author CV, October 2026.",
-    "checked": "2026-10-26",
+    "note": "Submitted manuscript. Target venue: IEEE Transactions on Software Engineering. Status from the author-updated CV, October 27, 2026.",
+    "checked": "2026-10-27",
     "sources": [
       "docs/02_Curriculum_Vitae.tex"
-    ]
+    ],
+    "year": "2026"
   },
   "Mining design decisions and rationale evidence across research software projects.": {
     "key": "babaei-design-rationale",
@@ -311,6 +318,17 @@ const publicationDetails = {
     "author": "N. Ezzati-Jivan and M. Panahandeh and M. Babaei",
     "note": "Submitted manuscript. Target venue: ICSE 2027 NIER. Status from the author CV, October 2026.",
     "checked": "2026-10-26",
+    "sources": [
+      "docs/02_Curriculum_Vitae.tex"
+    ]
+  },
+  "Temporal Graph Models for Predictive Monitoring in Microservices.": {
+    "key": "khodabandeh-temporal-graph-monitoring",
+    "type": "unpublished",
+    "author": "G. Khodabandeh and A. Ezaz and M. Babaei and N. Ezzati-Jivan",
+    "year": "2026",
+    "note": "Revision requested manuscript. Target venue: Empirical Software Engineering. Status from the author-updated CV, October 27, 2026.",
+    "checked": "2026-10-27",
     "sources": [
       "docs/02_Curriculum_Vitae.tex"
     ]

@@ -41,6 +41,18 @@ The website is a curated portfolio, not a verbatim CV. Record deliberate content
 
 ## History
 
+### 2026-10-27 — Journal reconciliation and CV synchronization
+
+- Source: the author's supplied journal list, incorporated into `docs/02_Curriculum_Vitae.tex` before synchronizing the website. Previous source baseline: SHA-256 `79869A0EE423C8477E0F44E7D5D989E9E0D7BA7E912E6D6B5BA5BB5135CCFCCD`, recorded on 2026-10-26 and unchanged through website commit `c08bfc5`; initial CV baseline commit `b66a7e9`.
+- Added Temporal Graph Models for Predictive Monitoring in Microservices with the supplied four authors, 2026 manuscript year, EMSE target, and Revision requested status. Moved RapidPay from published/accepted to manuscripts and corrected Accepted to Revision requested in the CV, website, BibTeX, project grid, and shared map details. Updated use-hpc and LIFTDroid from Under review to Submitted. Preserved RATEN and the 2023 regression-testing article as published, with existing publication details.
+- Added the previously author-confirmed Safe Coordination manuscript and software artifact to the CV, bringing the source and website back into agreement. Updated 2026 manuscript years for the supplied journal entries and kept manuscript citations as `@unpublished`, with target venues and statuses in notes rather than confirmed journal publication fields.
+- Website counts: 16 to 15 published/accepted entries; eight to ten submitted/under-review/revision-requested entries. The research map and grid still contain 12 curated artifacts; reviewed both through their shared project data and map-detail checks. No repository is inferred for the new temporal-graph paper.
+- Regenerated the downloadable CV twice after the final source edit. The CV now has seven pages; moved the artifact section heading onto its table page to avoid an orphan heading. CV SHA-256: `4A80CA8435236BCACFE6B63E235DA4EF8FA3B7767189591990C5BE300E87575A`.
+- Files: `docs/02_Curriculum_Vitae.tex`, `assets/02_Curriculum_Vitae.pdf`, `assets/main.js`, `assets/publication-data.js`, `index.html`, `README.md`, `scripts/check.mjs`, `CHANGELOG.md`.
+- Deliberate omissions: retained existing portfolio citation formatting with author initials; administrative Refereed/Open Access fields are not displayed by this portfolio/CV format. No unverified preprint, abstract, DOI, or acceptance is added for manuscripts. The pasted page number and repeated author heading were not publication content.
+- Validation: `node scripts/check.mjs` passed with updated counts and checks for manuscript membership, exact statuses, unpublished citation types, artifact links, all 12 map nodes/details, filtering, repository search, themes, and cursor behavior. Rendered and visually inspected all seven PDF pages, then re-rendered and inspected the two pages affected by the final pagination fix; PDF text extraction confirms the added papers and statuses. No overfull/underfull boxes; a font-size substitution warning remains without a visible rendering defect. Browser visual verification was not performed.
+- Delivery: local completion and validation; deployment pending.
+
 ### 2026-10-27 ? Feature Safe Coordination of Untrusted AI Agents
 
 - Added the project to the curated Agents grid and interactive research map (11 ? 12 projects), with a compact map label, related agent projects, and a repository detail link. Listed the manuscript separately as Submitted ? IEEE TSE (seven ? eight submitted/under-review entries), with an unpublished BibTeX citation; no acceptance or complete machine-verification claim is made.
