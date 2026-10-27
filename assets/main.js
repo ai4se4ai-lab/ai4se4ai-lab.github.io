@@ -10,7 +10,8 @@ const projects = [
   ['RapidPay','Analysis','Identifying and prioritizing self-admitted technical-debt chains through impact-ripple ranking.','Accepted · EMSE','RapidPay','Technical debt · Maintenance'],
   ['RATEN / ra4xstate','Analysis','Efficient robustness analysis and test enhancement for state machines and statecharts.','SoSyM 2026','RATEN-ra4xstate','State machines · Robustness'],
   ['MRegTest','Analysis','Replay-based regression testing for distributed UML-RT models.','MODELS Companion 2021','https://github.com/MajidGitHubRepos/MRegTest','UML-RT · Regression testing'],
-  ['MReplayer','Analysis','Deterministic execution-trace replay for distributed reactive systems in model-driven development.','MODELS Companion 2020','https://github.com/MajidGitHubRepos/MReplayer','Execution traces · Replay']
+  ['MReplayer','Analysis','Deterministic execution-trace replay for distributed reactive systems in model-driven development.','MODELS Companion 2020','https://github.com/MajidGitHubRepos/MReplayer','Execution traces · Replay'],
+  ['Safe Coordination of Untrusted AI Agents','Agents','A deterministic controller coordinates untrusted agent proposals, tracks dependencies, and publishes consistent snapshots, with TLA+ specifications and reproducible case studies.','Submitted · IEEE TSE','coordination-of-untrusted-ai-agents','Coordination · Formal methods']
 ];
 const published = [
  ['2027','ICSE','SkillSpec: A formally verifiable specification format for composing agent skills.','M. Babaei and A. Heydarnoori. Research Track; to appear.','https://github.com/ai4se4ai-lab/swe-multiskillsbench'],
@@ -31,6 +32,7 @@ const published = [
  ['2013','Natural Computing','A novel text and image encryption method based on chaos theory and DNA computing.','M. Babaei. 12(1):101–107.']
 ];
 const submitted = [
+ ['Submitted','IEEE TSE','Safe Coordination of Untrusted AI Agents.','M. Babaei.','https://github.com/ai4se4ai-lab/coordination-of-untrusted-ai-agents'],
  ['Under review','ASE journal','use-hpc: Agent-configured, statically checked Slurm pipelines for large-scale GPU experiments.','M. Babaei.','https://github.com/ai4se4ai-lab/use-hpc'],
  ['Submitted','ASE journal','RES-AI: Evidence-bound readiness for AI software engineering experiments on shared HPC infrastructure.','M. Babaei.','https://github.com/ai4se4ai-lab/RES-AI'],
  ['Submitted','ICSE 2027 NIER','AgentM2M: M2M transformations for agentic collaborations in software engineering.','M. Babaei, S. Farshidi, O. Adesina, N. Ezzati-Jivan, and L. Wei.','https://github.com/ai4se4ai-lab/AgentM2M'],
@@ -70,7 +72,7 @@ function renderPublications(kind = 'published') {
       ? `<p class="abstract-kind">Abstract summary</p><p>${escapeHTML(metadata.abstractSummary)}</p>${externalLink(metadata.abstractSource, 'Source and original abstract')}`
       : '<p class="small">An abstract has not yet been added for this paper.</p>';
     return `<article class="publication-entry"><details class="publication-disclosure"><summary class="publication"><span class="publication-label">${escapeHTML(year)}<small>${escapeHTML(venue)}</small></span><span class="publication-summary"><span class="publication-title">${escapeHTML(title)}</span><span class="publication-authors">${escapeHTML(authors)}</span><span class="publication-hint">${review ? 'BibTeX citation' : 'Abstract & BibTeX'} · Click to expand</span></span><span class="publication-expand" aria-hidden="true">+</span></summary><div class="publication-content">
-      <div class="publication-links">${!review ? externalLink(metadata.paperUrl, 'Published paper') : ''}${externalLink(metadata.preprintUrl, 'Preprint / author manuscript')}${!review ? externalLink(codeUrl, 'Code / artifact') : ''}</div>
+      <div class="publication-links">${!review ? externalLink(metadata.paperUrl, 'Published paper') : ''}${externalLink(metadata.preprintUrl, 'Preprint / author manuscript')}${externalLink(codeUrl, 'Code / artifact')}</div>
       ${review && !metadata.preprintUrl ? '<p class="small preprint-note">No verified public preprint link is currently available.</p>' : ''}
       <div class="citation-tabs" role="tablist" aria-label="Details for ${escapeHTML(title)}">
         ${!review ? `<button type="button" id="${id}-abstract-tab" role="tab" aria-selected="true" aria-controls="${id}-abstract" data-pub-tab="abstract">Abstract</button>` : ''}

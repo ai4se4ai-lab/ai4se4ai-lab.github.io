@@ -235,6 +235,16 @@ const publicationDetails = {
     "abstractSummary": "The paper investigates text and image encryption through a combination of one-time-pad techniques, chaotic dynamics, and DNA-inspired representations. A logistic map contributes to the encryption procedure, and simulations compare the proposed method with an AES implementation.",
     "abstractSource": "https://link.springer.com/article/10.1007/s11047-012-9334-9"
   },
+  "Safe Coordination of Untrusted AI Agents.": {
+    "key": "babaei-safe-coordination",
+    "type": "unpublished",
+    "author": "M. Babaei",
+    "note": "Submitted manuscript. Target venue: IEEE Transactions on Software Engineering. Submission confirmed by the author, October 27, 2026.",
+    "checked": "2026-10-27",
+    "sources": [
+      "https://github.com/ai4se4ai-lab/coordination-of-untrusted-ai-agents"
+    ]
+  },
   "use-hpc: Agent-configured, statically checked Slurm pipelines for large-scale GPU experiments.": {
     "key": "babaei-use-hpc",
     "type": "unpublished",

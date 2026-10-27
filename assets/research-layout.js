@@ -1,6 +1,7 @@
 // Qualitative editorial placement by research focus, not a measured AI/SE score.
 // Keys keep the layout stable when projects are reordered in the portfolio.
 const researchPlacement = {
+  'Safe Coordination of Untrusted AI Agents': {x:22,y:90,world:'ai',nodeLabel:'Untrusted AI',label:'Formal coordination for AI agents',reason:'A deterministic software controller structures untrusted AI proposals through explicit dependencies and guarded publication.',related:['AgentM2M','AutoM2M','SkillSpec']},
   'AutoM2M': {x:22,y:45,world:'ai',label:'AI systems → reliable teams',reason:'LLM-assembled agent teams are the subject; checked transformations make their collaboration reliable.',related:['AgentM2M','SkillSpec']},
   'RES-AI': {x:20,y:62,world:'ai',label:'Engineering for AI',reason:'Readiness evidence supports trustworthy AI experiments on shared infrastructure.',related:['use-hpc']},
   'use-hpc': {x:24,y:80,world:'ai',label:'Engineering for AI',reason:'Agent-configured experiment pipelines connect AI research with checked execution infrastructure.',related:['RES-AI']},
