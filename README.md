@@ -2,7 +2,7 @@
 
 A minimal academic portfolio for Majid Babaei, Assistant Professor at the University of the Fraser Valley. Built with plain HTML, CSS, and JavaScript for GitHub Pages. No build step or package installation is required.
 
-The site includes an animated AI/SE diagram, category filters for 11 research artifacts, 16 published/accepted publications, seven submitted/under-review manuscripts, teaching, mentorship, academic background, service, and a searchable snapshot of every public repository on the account. Forks are explicitly labeled. Content follows `docs/02_Curriculum_Vitae.tex`; submission statuses are kept separate from published work.
+The site includes an animated AI/SE diagram, category filters for 11 featured research artifacts plus automatically discovered original public repositories, 16 published/accepted publications, seven submitted/under-review manuscripts, teaching, mentorship, academic background, service, and a searchable snapshot of every public repository on the account. Forks are explicitly labeled. Academic content follows `docs/02_Curriculum_Vitae.tex`; submission statuses are kept separate from published work.
 
 ## Preview
 
@@ -19,7 +19,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the website history, the CV-to-website cont
 - Publication paper/preprint links, abstract summaries, and BibTeX fields: `assets/publication-data.js`, keyed by the exact publication title. Keep these keys aligned when editing titles in `assets/main.js`.
 - Colors, typography, animation, and responsive layouts: `assets/style.css`.
 - Repeating geometric background and cursor-reactive line colors: `assets/geometric-pattern.svg`, `assets/cursor-magic.css`, and `assets/cursor-magic.js`. Sections opt in with `data-cursor-surface`; theme colors use the existing root appearance attribute.
-- All public repositories: run `node scripts/refresh-repositories.mjs`. This refreshes the checked-in snapshot without making visitors depend on the GitHub API.
+- All public repositories: refreshed automatically during deployment, or locally with `node scripts/refresh-repositories.mjs`. Visitors read a static snapshot rather than calling the GitHub API. Original repositories also become cards in **All work** and **More repositories**, excluding this website and duplicates of featured projects. Forks appear only in the directory; archived originals are labeled. Card descriptions and languages come from GitHub, without inferred academic statuses. The research map stays limited to the curated `projects` array and its manually maintained placements.
 - CV: edit `docs/02_Curriculum_Vitae.tex`, then run `pdflatex -interaction=nonstopmode -halt-on-error -output-directory=assets docs/02_Curriculum_Vitae.tex` twice. Commit the resulting PDF. Auxiliary LaTeX files are ignored.
 
 Google Fonts enhances the typography when available; local fallback fonts are provided. Motion follows the visitor’s reduced-motion preference. Contact links use email directly; no form collects visitor data.
@@ -32,4 +32,8 @@ The background repeats the geometric petal/hexagon motif from the [Cursor Magic 
 
 ## GitHub Pages
 
-Push this repository to `main`, then select **Settings → Pages → Build and deployment → Source → GitHub Actions**. The included workflow publishes only public site files to https://ai4se4ai-lab.github.io/. Deployment has not been triggered from this local checkout.
+Push this repository to `main`, then select **Settings → Pages → Build and deployment → Source → GitHub Actions**. The included workflow publishes only public site files to https://ai4se4ai-lab.github.io/.
+
+The Pages workflow refreshes the account's public repositories, runs the website checks, and deploys on every push to `main`, manual run, and hourly at minute 17 UTC. New public repositories, description changes, archives, and removals are reflected on the next successful run. The generated snapshot is included in the deployment artifact; scheduled runs do not commit it back to Git. The checked-in snapshot is a local-preview baseline. Refresh/API or validation failures stop publication, leaving the existing site deployed. The workflow uses the built-in `GITHUB_TOKEN`; no additional secret is needed for hourly discovery.
+
+This is scheduled discovery, so creating a repository does not trigger an immediate run. GitHub can delay scheduled runs and disables schedules in public repositories after 60 days without repository activity; re-enable the workflow in Actions if needed. See [GitHub's schedule documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule). For an immediate refresh, use **Actions → Deploy GitHub Pages → Run workflow**. An external integration can also send a `repository_dispatch` event with type `repositories-updated`; no webhook receiver is configured by this repository.

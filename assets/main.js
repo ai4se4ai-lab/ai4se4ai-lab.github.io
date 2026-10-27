@@ -40,10 +40,21 @@ const submitted = [
  ['Submitted','ICSE 2027 NIER','Was it my code? Evidence-based performance diagnosis for CI on shared GPUs.','N. Ezzati-Jivan, M. Panahandeh, and M. Babaei.']
 ];
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
+let repositoryProjects = [];
+let activeProjectCategory = 'All';
+function integrateRepositoryProjects(repositories) {
+  const featuredURLs = new Set(projects.map(project => (project[4].startsWith('https://') ? project[4] : `https://github.com/ai4se4ai-lab/${project[4]}`).toLowerCase()));
+  repositoryProjects = repositories.filter(repo => !repo.fork && repo.name !== 'ai4se4ai-lab.github.io' && !featuredURLs.has(repo.html_url.toLowerCase())).map(repo => [
+    repo.name, 'Repositories', repo.description || 'Explore the repository for code and project details.',
+    repo.archived ? 'Archived repository' : 'Public repository', repo.html_url, repo.language || 'GitHub'
+  ]);
+  renderProjects(activeProjectCategory);
+}
 function renderProjects(category = 'All') {
-  document.querySelector('#project-grid').innerHTML = projects.filter(project => category === 'All' || project[1] === category).map(([name, theme, description, status, repository, tags, featured]) => {
+  activeProjectCategory = category;
+  document.querySelector('#project-grid').innerHTML = [...projects, ...repositoryProjects].filter(project => category === 'All' || project[1] === category).map(([name, theme, description, status, repository, tags, featured]) => {
     const url = repository.startsWith('https://') ? repository : `https://github.com/ai4se4ai-lab/${repository}`;
-    return `<article class="project-card${featured ? ' featured' : ''}"><div class="project-top"><span>${escapeHTML(theme.toUpperCase())}</span><span class="arrow" aria-hidden="true">↗</span></div><h3>${escapeHTML(name)}</h3><p>${escapeHTML(description)}</p><div class="project-bottom"><span>${escapeHTML(status)}</span><span>${escapeHTML(tags)}</span></div><a href="${url}" target="_blank" rel="noopener" aria-label="${escapeHTML(name)} repository on GitHub (opens in a new tab)"></a></article>`;
+    return `<article class="project-card${featured ? ' featured' : ''}"><div class="project-top"><span>${escapeHTML(theme.toUpperCase())}</span><span class="arrow" aria-hidden="true">↗</span></div><h3>${escapeHTML(name)}</h3><p>${escapeHTML(description)}</p><div class="project-bottom"><span>${escapeHTML(status)}</span><span>${escapeHTML(tags)}</span></div><a href="${escapeHTML(url)}" target="_blank" rel="noopener" aria-label="${escapeHTML(name)} repository on GitHub (opens in a new tab)"></a></article>`;
   }).join('');
   document.querySelectorAll('.filter').forEach(button => {const selected = button.dataset.filter === category; button.classList.toggle('active', selected);button.setAttribute('aria-pressed', selected);});
 }
@@ -153,7 +164,7 @@ function renderRepositories() {
  });
 }
 async function loadRepositories(){
- try {const response=await fetch('assets/repositories.json');if(!response.ok)throw new Error('Repository data unavailable');const data=await response.json();repositories=data.repositories;snapshotDate=data.updated;renderRepositories();}
+ try {const response=await fetch('assets/repositories.json');if(!response.ok)throw new Error('Repository data unavailable');const data=await response.json();repositories=data.repositories;snapshotDate=data.updated;integrateRepositoryProjects(repositories);renderRepositories();}
  catch {document.querySelector('#repo-status').textContent='The repository directory could not load. Use the GitHub link below to browse all repositories.';}
 }
 document.querySelector('#repo-search').addEventListener('input',renderRepositories);

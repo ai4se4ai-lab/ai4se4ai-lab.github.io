@@ -41,6 +41,16 @@ The website is a curated portfolio, not a verbatim CV. Record deliberate content
 
 ## History
 
+### 2026-10-27 — Automatic repository discovery and Pages redeployment
+
+- Added hourly Pages runs (minute 17 UTC), plus an optional `repositories-updated` dispatch trigger. Every deployment refreshes the public GitHub inventory and validates the site before publishing. API/check failures stop publication; the deployed snapshot is an artifact, without automated commits.
+- Added original public repositories to the project grid under All work and More repositories, using GitHub descriptions and languages. Excluded forks, the website repository, and duplicates of featured research; labeled archived repositories. Preserved the selected filter after asynchronous loading and escaped repository content.
+- Reviewed the research map: it intentionally keeps the 11 curated CV-based projects and existing placements. Automatically discovered repositories have no inferred research classification or publication status. Forks remain labeled in the searchable directory.
+- Refreshed the local snapshot from 83 to 84 public repositories and sorted it by name. Made repository search validation depend on actual snapshot content so future additions do not break deployment.
+- Files: `.github/workflows/pages.yml`, `scripts/refresh-repositories.mjs`, `scripts/check.mjs`, `assets/main.js`, `assets/repositories.json`, `index.html`, `README.md`, `CHANGELOG.md`.
+- Validation: live public API refresh and `node scripts/check.mjs` passed, including automatic card discovery, duplicate/fork exclusion, filter retention, escaping, all 11 research nodes, publication interactions, repository search, themes, and cursor behavior. Browser visual verification was not performed. No CV synchronization was needed.
+- Delivery: local implementation complete; commit, push, and deployment verification pending.
+
 ### 2026-10-26 — Smaller, softer background pattern
 
 - Reduced the geometric repeat from 180px to 64px on desktop and from 148px to 48px on mobile, preserving its proportions.

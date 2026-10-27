@@ -3,6 +3,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+  repository_dispatch:
+    types: [repositories-updated]
 permissions:
   contents: read
   pages: write
@@ -18,6 +22,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Refresh public repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/refresh-repositories.mjs
+      - name: Validate website
+        run: node scripts/check.mjs
       - uses: actions/configure-pages@v5
       - name: Prepare public files
         run: |

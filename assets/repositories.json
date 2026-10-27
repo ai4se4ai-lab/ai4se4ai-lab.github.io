@@ -1,162 +1,10 @@
 {
-  "updated": "2026-10-26",
+  "updated": "2026-10-27",
   "repositories": [
     {
-      "name": "ai4se4ai-lab.github.io",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/ai4se4ai-lab.github.io",
-      "language": null,
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "RES-AI",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/RES-AI",
-      "language": null,
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "everything-claude-code",
-      "description": "Claude Code toolkit - agents, commands, skills, rules, and hooks for productive AI-assisted development",
-      "html_url": "https://github.com/ai4se4ai-lab/everything-claude-code",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "MORPH-FL",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/MORPH-FL",
-      "language": null,
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "use-hpc",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/use-hpc",
-      "language": "Python",
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "LETHE",
-      "description": "Localizing Errors Through Hypothesis Erasure. Forget the story. Keep the model!",
-      "html_url": "https://github.com/ai4se4ai-lab/LETHE",
-      "language": null,
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "archify",
-      "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
-      "html_url": "https://github.com/ai4se4ai-lab/archify",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "use-hpc-evaluation",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/use-hpc-evaluation",
-      "language": "Python",
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "use-hpc-claude-skill",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/use-hpc-claude-skill",
-      "language": "Python",
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "cs336-lectures",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/cs336-lectures",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "DS-A2A",
-      "description": "Towards Deterministic Structure for Stochastic Agents: M2M Transformations for Agentic Collaborations",
-      "html_url": "https://github.com/ai4se4ai-lab/DS-A2A",
-      "language": "Python",
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "cortexdb",
-      "description": "AI memory and a knowledge graph in one SQLite file. Pure Go: vectors, RAG, agent memory, RDF/SPARQL, Cypher, 80+ MCP tools. Works without an embedding model.",
-      "html_url": "https://github.com/ai4se4ai-lab/cortexdb",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "refine",
-      "description": "A React Framework for building  internal tools, admin panels, dashboards & B2B apps with unmatched flexibility.",
-      "html_url": "https://github.com/ai4se4ai-lab/refine",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "rrsi",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/rrsi",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "M2MColab",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/M2MColab",
-      "language": null,
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "warp",
-      "description": "Warp is an agentic development environment, born out of the terminal.",
-      "html_url": "https://github.com/ai4se4ai-lab/warp",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "jumpserver",
-      "description": "JumpServer is an Open-source Privileged Access Management (PAM) platform with AI-powered capabilities, providing DevOps and IT teams a unified workspace to securely access SSH, RDP, Kubernetes, databases, websites, RemoteApp, VirtualApp, and more.",
-      "html_url": "https://github.com/ai4se4ai-lab/jumpserver",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "AgentM2M",
-      "description": "We present AgentM2M, a model-to-model transformation framework that dynamically transforms agent collaboration models across strategic, tactical, and operational abstraction levels.",
-      "html_url": "https://github.com/ai4se4ai-lab/AgentM2M",
-      "language": null,
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "swe-multiskillsbench",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/swe-multiskillsbench",
-      "language": "PDDL",
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "laya-coreml",
-      "description": "Local Laya typed decisions on Apple Core ML and Neural Engine. Validated ports, ~5 ms short decisions on M3 Max, reproducible speed and energy benchmarks.",
-      "html_url": "https://github.com/ai4se4ai-lab/laya-coreml",
+      "name": "agent-api-cookiecutter",
+      "description": "A ready-to-go template for building powerful Agent APIs",
+      "html_url": "https://github.com/ai4se4ai-lab/agent-api-cookiecutter",
       "language": null,
       "fork": true,
       "archived": false
@@ -170,73 +18,41 @@
       "archived": false
     },
     {
-      "name": "evergrace-app",
+      "name": "agent-zero",
+      "description": "Agent Zero AI framework",
+      "html_url": "https://github.com/ai4se4ai-lab/agent-zero",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "AgenticTDRepayment",
       "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/evergrace-app",
-      "language": "TypeScript",
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "hyperresearch",
-      "description": "Agent-driven research knowledge base. Agents collect, search, and synthesize web research into a persistent, searchable wiki.",
-      "html_url": "https://github.com/ai4se4ai-lab/hyperresearch",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "mindwork",
-      "description": "A hive mind communication platform",
-      "html_url": "https://github.com/ai4se4ai-lab/mindwork",
-      "language": "Rust",
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "deepseek-harness",
-      "description": "DeepSeek Harness: Everything is a Plugin.",
-      "html_url": "https://github.com/ai4se4ai-lab/deepseek-harness",
-      "language": "TypeScript",
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "okf-anchor",
-      "description": "OKF Anchor is an open-source platform for publishing, verifying, preserving, and querying Open Knowledge Format (OKF) knowledge bundles as trusted knowledge assets.",
-      "html_url": "https://github.com/ai4se4ai-lab/okf-anchor",
+      "html_url": "https://github.com/ai4se4ai-lab/AgenticTDRepayment",
       "language": null,
       "fork": false,
       "archived": false
     },
     {
-      "name": "knowledge-catalog",
-      "description": "Google Cloud Knowledge Catalog Tools and Samples",
-      "html_url": "https://github.com/ai4se4ai-lab/knowledge-catalog",
-      "language": null,
+      "name": "AgentLaboratory",
+      "description": "Agent Laboratory is an end-to-end autonomous research workflow meant to assist you as the human researcher toward implementing your research ideas",
+      "html_url": "https://github.com/ai4se4ai-lab/AgentLaboratory",
+      "language": "Python",
       "fork": true,
       "archived": false
     },
     {
-      "name": "srvmind-lab",
-      "description": "A landing page for all projects developed at srvmind-lab",
-      "html_url": "https://github.com/ai4se4ai-lab/srvmind-lab",
+      "name": "AgentM2M",
+      "description": "We present AgentM2M, a model-to-model transformation framework that dynamically transforms agent collaboration models across strategic, tactical, and operational abstraction levels.",
+      "html_url": "https://github.com/ai4se4ai-lab/AgentM2M",
       "language": null,
       "fork": false,
       "archived": false
     },
     {
-      "name": "second-brain",
+      "name": "AI-4-Research.github.io",
       "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/second-brain",
-      "language": null,
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "semantica",
-      "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
-      "html_url": "https://github.com/ai4se4ai-lab/semantica",
+      "html_url": "https://github.com/ai4se4ai-lab/AI-4-Research.github.io",
       "language": null,
       "fork": true,
       "archived": false
@@ -250,105 +66,17 @@
       "archived": false
     },
     {
-      "name": "llm-inference-in-production",
-      "description": "Everything you need to know about LLM inference",
-      "html_url": "https://github.com/ai4se4ai-lab/llm-inference-in-production",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "governed-superpowers",
-      "description": "An agentic skills framework & software development methodology that works.",
-      "html_url": "https://github.com/ai4se4ai-lab/governed-superpowers",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "governed-graphify",
-      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
-      "html_url": "https://github.com/ai4se4ai-lab/governed-graphify",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "MindPortalix-app-test",
+      "name": "ai4se4ai-lab.github.io",
       "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/MindPortalix-app-test",
-      "language": "Python",
+      "html_url": "https://github.com/ai4se4ai-lab/ai4se4ai-lab.github.io",
+      "language": "JavaScript",
       "fork": false,
       "archived": false
     },
     {
-      "name": "marti-app",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/marti-app",
-      "language": null,
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "EvenNumbersPrinter",
-      "description": "A simple C++ program to print even numbers from 33 to 77",
-      "html_url": "https://github.com/ai4se4ai-lab/EvenNumbersPrinter",
-      "language": "C++",
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "RapidPay",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/RapidPay",
-      "language": "TypeScript",
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "embed-anything-rag-app",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/embed-anything-rag-app",
-      "language": "TypeScript",
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "openclaw-mission-control",
-      "description": "AI Agent Orchestration Dashboard - Manage AI agents, assign tasks, and coordinate multi-agent collaboration via OpenClaw Gateway.",
-      "html_url": "https://github.com/ai4se4ai-lab/openclaw-mission-control",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "emp-ANASE",
-      "description": "An Empirical Study on Analogical Reasoning in Agentic Software Engineering",
-      "html_url": "https://github.com/ai4se4ai-lab/emp-ANASE",
-      "language": null,
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "Dialectic",
-      "description": "ARIS ⚔️ (Auto-Research-In-Sleep) — Lightweight Markdown-only skills for autonomous ML research: cross-model review loops, idea discovery, and experiment automation. No framework, no lock-in — works with Claude Code, Codex, OpenClaw, or any LLM agent.",
-      "html_url": "https://github.com/ai4se4ai-lab/Dialectic",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "claude-scholar",
-      "description": "Semi-automated research assistant for academic research and software development. Supports Claude Code, OpenCode, and Codex CLI across ideation, coding, experiments, writing, and publication.",
-      "html_url": "https://github.com/ai4se4ai-lab/claude-scholar",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "SkillNet",
-      "description": "Create, Evaluate, and Connect AI Skills",
-      "html_url": "https://github.com/ai4se4ai-lab/SkillNet",
+      "name": "archify",
+      "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+      "html_url": "https://github.com/ai4se4ai-lab/archify",
       "language": null,
       "fork": true,
       "archived": false
@@ -362,9 +90,17 @@
       "archived": false
     },
     {
-      "name": "GitNexus",
-      "description": "GitNexus: The Zero-Server Code Intelligence Engine -       GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
-      "html_url": "https://github.com/ai4se4ai-lab/GitNexus",
+      "name": "chattracker-extension",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/chattracker-extension",
+      "language": null,
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "claude-scholar",
+      "description": "Semi-automated research assistant for academic research and software development. Supports Claude Code, OpenCode, and Codex CLI across ideation, coding, experiments, writing, and publication.",
+      "html_url": "https://github.com/ai4se4ai-lab/claude-scholar",
       "language": null,
       "fork": true,
       "archived": false
@@ -378,9 +114,9 @@
       "archived": false
     },
     {
-      "name": "paperbanana",
-      "description": "Open source implementation and extension of Google Research’s PaperBanana for automated academic figures, diagrams, and research visuals, expanded to new domains like slide generation.",
-      "html_url": "https://github.com/ai4se4ai-lab/paperbanana",
+      "name": "cortexdb",
+      "description": "AI memory and a knowledge graph in one SQLite file. Pure Go: vectors, RAG, agent memory, RDF/SPARQL, Cypher, 80+ MCP tools. Works without an embedding model.",
+      "html_url": "https://github.com/ai4se4ai-lab/cortexdb",
       "language": null,
       "fork": true,
       "archived": false
@@ -394,50 +130,18 @@
       "archived": false
     },
     {
-      "name": "LitRevResearchAgent",
-      "description": "LitRevRA (Literature Review Research Assistant) is an AI-powered tool designed to automate and streamline the literature review process for researchers. By leveraging Large Language Models, it helps collect, analyze, and synthesize research literature to generate comprehensive, publication-quality reports that meet high academic standards.",
-      "html_url": "https://github.com/ai4se4ai-lab/LitRevResearchAgent",
-      "language": "Python",
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "ralph",
-      "description": "Ralph is an autonomous AI agent loop that runs repeatedly until all PRD items are complete. ",
-      "html_url": "https://github.com/ai4se4ai-lab/ralph",
+      "name": "cs336-lectures",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/cs336-lectures",
       "language": null,
       "fork": true,
       "archived": false
     },
     {
-      "name": "agent-zero",
-      "description": "Agent Zero AI framework",
-      "html_url": "https://github.com/ai4se4ai-lab/agent-zero",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "agent-api-cookiecutter",
-      "description": "A ready-to-go template for building powerful Agent APIs",
-      "html_url": "https://github.com/ai4se4ai-lab/agent-api-cookiecutter",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "KGCompass",
-      "description": "Knowledge Graph Enhanced Software Repair Framework",
-      "html_url": "https://github.com/ai4se4ai-lab/KGCompass",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "pydriller",
-      "description": "Python Framework to analyse Git repositories",
-      "html_url": "https://github.com/ai4se4ai-lab/pydriller",
-      "language": null,
+      "name": "deepseek-harness",
+      "description": "DeepSeek Harness: Everything is a Plugin.",
+      "html_url": "https://github.com/ai4se4ai-lab/deepseek-harness",
+      "language": "TypeScript",
       "fork": true,
       "archived": false
     },
@@ -450,25 +154,105 @@
       "archived": false
     },
     {
-      "name": "ownrex.ai",
-      "description": "Copilot Chat extension for VS Code",
-      "html_url": "https://github.com/ai4se4ai-lab/ownrex.ai",
+      "name": "Dialectic",
+      "description": "ARIS ⚔️ (Auto-Research-In-Sleep) — Lightweight Markdown-only skills for autonomous ML research: cross-model review loops, idea discovery, and experiment automation. No framework, no lock-in — works with Claude Code, Codex, OpenClaw, or any LLM agent.",
+      "html_url": "https://github.com/ai4se4ai-lab/Dialectic",
       "language": null,
       "fork": true,
       "archived": false
     },
     {
-      "name": "rag-refact",
-      "description": "AI Agent that handles engineering tasks end-to-end: integrates with developers’ tools, plans, executes, and iterates until it achieves a successful result.",
-      "html_url": "https://github.com/ai4se4ai-lab/rag-refact",
+      "name": "DS-A2A",
+      "description": "Towards Deterministic Structure for Stochastic Agents: M2M Transformations for Agentic Collaborations",
+      "html_url": "https://github.com/ai4se4ai-lab/DS-A2A",
+      "language": "Python",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "embed-anything-rag-app",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/embed-anything-rag-app",
+      "language": "TypeScript",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "emp-ANASE",
+      "description": "An Empirical Study on Analogical Reasoning in Agentic Software Engineering",
+      "html_url": "https://github.com/ai4se4ai-lab/emp-ANASE",
+      "language": null,
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "EvenNumbersPrinter",
+      "description": "A simple C++ program to print even numbers from 33 to 77",
+      "html_url": "https://github.com/ai4se4ai-lab/EvenNumbersPrinter",
+      "language": "C++",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "evergrace-app",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/evergrace-app",
+      "language": "TypeScript",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "everything-claude-code",
+      "description": "Claude Code toolkit - agents, commands, skills, rules, and hooks for productive AI-assisted development",
+      "html_url": "https://github.com/ai4se4ai-lab/everything-claude-code",
       "language": null,
       "fork": true,
       "archived": false
     },
     {
-      "name": "smolagents",
-      "description": "🤗 smolagents: a barebones library for agents that think in code.",
-      "html_url": "https://github.com/ai4se4ai-lab/smolagents",
+      "name": "excalidraw",
+      "description": "Virtual whiteboard for sketching hand-drawn like diagrams",
+      "html_url": "https://github.com/ai4se4ai-lab/excalidraw",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "GitNexus",
+      "description": "GitNexus: The Zero-Server Code Intelligence Engine -       GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+      "html_url": "https://github.com/ai4se4ai-lab/GitNexus",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "governed-graphify",
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "html_url": "https://github.com/ai4se4ai-lab/governed-graphify",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "governed-superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "html_url": "https://github.com/ai4se4ai-lab/governed-superpowers",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "gumroad",
+      "description": "Sell stuff and see what sticks",
+      "html_url": "https://github.com/ai4se4ai-lab/gumroad",
+      "language": "Ruby",
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "hyperresearch",
+      "description": "Agent-driven research knowledge base. Agents collect, search, and synthesize web research into a persistent, searchable wiki.",
+      "html_url": "https://github.com/ai4se4ai-lab/hyperresearch",
       "language": null,
       "fork": true,
       "archived": false
@@ -482,33 +266,81 @@
       "archived": false
     },
     {
-      "name": "RATEN-ra4xstate",
-      "description": "Robustness Testing for Xstate",
-      "html_url": "https://github.com/ai4se4ai-lab/RATEN-ra4xstate",
+      "name": "invest-app",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/invest-app",
       "language": "TypeScript",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "jumpserver",
+      "description": "JumpServer is an Open-source Privileged Access Management (PAM) platform with AI-powered capabilities, providing DevOps and IT teams a unified workspace to securely access SSH, RDP, Kubernetes, databases, websites, RemoteApp, VirtualApp, and more.",
+      "html_url": "https://github.com/ai4se4ai-lab/jumpserver",
+      "language": null,
       "fork": true,
       "archived": false
     },
     {
-      "name": "chattracker-extension",
+      "name": "KGCompass",
+      "description": "Knowledge Graph Enhanced Software Repair Framework",
+      "html_url": "https://github.com/ai4se4ai-lab/KGCompass",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "knowledge-catalog",
+      "description": "Google Cloud Knowledge Catalog Tools and Samples",
+      "html_url": "https://github.com/ai4se4ai-lab/knowledge-catalog",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "KnowledgeBase",
       "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/chattracker-extension",
+      "html_url": "https://github.com/ai4se4ai-lab/KnowledgeBase",
       "language": null,
       "fork": false,
       "archived": false
     },
     {
-      "name": "old-chattracker-extension",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/old-chattracker-extension",
-      "language": "TypeScript",
+      "name": "laya-coreml",
+      "description": "Local Laya typed decisions on Apple Core ML and Neural Engine. Validated ports, ~5 ms short decisions on M3 Max, reproducible speed and energy benchmarks.",
+      "html_url": "https://github.com/ai4se4ai-lab/laya-coreml",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "LETHE",
+      "description": "Localizing Errors Through Hypothesis Erasure. Forget the story. Keep the model!",
+      "html_url": "https://github.com/ai4se4ai-lab/LETHE",
+      "language": null,
       "fork": false,
       "archived": false
     },
     {
-      "name": "excalidraw",
-      "description": "Virtual whiteboard for sketching hand-drawn like diagrams",
-      "html_url": "https://github.com/ai4se4ai-lab/excalidraw",
+      "name": "Link_Prediction",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/Link_Prediction",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "LitRevResearchAgent",
+      "description": "LitRevRA (Literature Review Research Assistant) is an AI-powered tool designed to automate and streamline the literature review process for researchers. By leveraging Large Language Models, it helps collect, analyze, and synthesize research literature to generate comprehensive, publication-quality reports that meet high academic standards.",
+      "html_url": "https://github.com/ai4se4ai-lab/LitRevResearchAgent",
+      "language": "Python",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "llm-inference-in-production",
+      "description": "Everything you need to know about LLM inference",
+      "html_url": "https://github.com/ai4se4ai-lab/llm-inference-in-production",
       "language": null,
       "fork": true,
       "archived": false
@@ -522,67 +354,59 @@
       "archived": false
     },
     {
+      "name": "M2MColab",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/M2MColab",
+      "language": null,
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "marti-app",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/marti-app",
+      "language": null,
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "mcp-obex-devops",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/mcp-obex-devops",
+      "language": null,
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "MindPortalix-app-test",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/MindPortalix-app-test",
+      "language": "Python",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "mindwork",
+      "description": "A hive mind communication platform",
+      "html_url": "https://github.com/ai4se4ai-lab/mindwork",
+      "language": "Rust",
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "MORPH-FL",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/MORPH-FL",
+      "language": null,
+      "fork": false,
+      "archived": false
+    },
+    {
       "name": "n8n-workflows",
       "description": "all of the workflows of n8n i could find (also from the site itself)",
       "html_url": "https://github.com/ai4se4ai-lab/n8n-workflows",
       "language": null,
       "fork": true,
-      "archived": false
-    },
-    {
-      "name": "obsidian-releases",
-      "description": "Community plugins list, theme list, and releases of Obsidian.",
-      "html_url": "https://github.com/ai4se4ai-lab/obsidian-releases",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "AgentLaboratory",
-      "description": "Agent Laboratory is an end-to-end autonomous research workflow meant to assist you as the human researcher toward implementing your research ideas",
-      "html_url": "https://github.com/ai4se4ai-lab/AgentLaboratory",
-      "language": "Python",
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "KnowledgeBase",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/KnowledgeBase",
-      "language": null,
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "gumroad",
-      "description": "Sell stuff and see what sticks",
-      "html_url": "https://github.com/ai4se4ai-lab/gumroad",
-      "language": "Ruby",
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "test-app",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/test-app",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "Link_Prediction",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/Link_Prediction",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
-      "name": "invest-app",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/invest-app",
-      "language": "TypeScript",
-      "fork": false,
       "archived": false
     },
     {
@@ -594,22 +418,6 @@
       "archived": false
     },
     {
-      "name": "SIKG",
-      "description": "SIKG - Semantic Impact Knowledge Graph",
-      "html_url": "https://github.com/ai4se4ai-lab/SIKG",
-      "language": "TypeScript",
-      "fork": false,
-      "archived": false
-    },
-    {
-      "name": "AI-4-Research.github.io",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/AI-4-Research.github.io",
-      "language": null,
-      "fork": true,
-      "archived": false
-    },
-    {
       "name": "ObEx4DevOps",
       "description": null,
       "html_url": "https://github.com/ai4se4ai-lab/ObEx4DevOps",
@@ -618,34 +426,122 @@
       "archived": false
     },
     {
-      "name": "test-RapidPay",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/test-RapidPay",
-      "language": "Python",
-      "fork": false,
+      "name": "obsidian-releases",
+      "description": "Community plugins list, theme list, and releases of Obsidian.",
+      "html_url": "https://github.com/ai4se4ai-lab/obsidian-releases",
+      "language": null,
+      "fork": true,
       "archived": false
     },
     {
-      "name": "AgenticTDRepayment",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/AgenticTDRepayment",
+      "name": "okf-anchor",
+      "description": "OKF Anchor is an open-source platform for publishing, verifying, preserving, and querying Open Knowledge Format (OKF) knowledge bundles as trusted knowledge assets.",
+      "html_url": "https://github.com/ai4se4ai-lab/okf-anchor",
       "language": null,
       "fork": false,
       "archived": false
     },
     {
-      "name": "Test-AgenticAnalogicalReasoning",
+      "name": "old-chattracker-extension",
       "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/Test-AgenticAnalogicalReasoning",
-      "language": "Python",
+      "html_url": "https://github.com/ai4se4ai-lab/old-chattracker-extension",
+      "language": "TypeScript",
       "fork": false,
       "archived": false
     },
     {
-      "name": "YouTubeRetriver",
+      "name": "openclaw-mission-control",
+      "description": "AI Agent Orchestration Dashboard - Manage AI agents, assign tasks, and coordinate multi-agent collaboration via OpenClaw Gateway.",
+      "html_url": "https://github.com/ai4se4ai-lab/openclaw-mission-control",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "ownrex.ai",
+      "description": "Copilot Chat extension for VS Code",
+      "html_url": "https://github.com/ai4se4ai-lab/ownrex.ai",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "paperbanana",
+      "description": "Open source implementation and extension of Google Research’s PaperBanana for automated academic figures, diagrams, and research visuals, expanded to new domains like slide generation.",
+      "html_url": "https://github.com/ai4se4ai-lab/paperbanana",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "pydriller",
+      "description": "Python Framework to analyse Git repositories",
+      "html_url": "https://github.com/ai4se4ai-lab/pydriller",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "rag-refact",
+      "description": "AI Agent that handles engineering tasks end-to-end: integrates with developers’ tools, plans, executes, and iterates until it achieves a successful result.",
+      "html_url": "https://github.com/ai4se4ai-lab/rag-refact",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "ralph",
+      "description": "Ralph is an autonomous AI agent loop that runs repeatedly until all PRD items are complete. ",
+      "html_url": "https://github.com/ai4se4ai-lab/ralph",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "RapidPay",
       "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/YouTubeRetriver",
-      "language": "JavaScript",
+      "html_url": "https://github.com/ai4se4ai-lab/RapidPay",
+      "language": "TypeScript",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "RATEN-ra4xstate",
+      "description": "Robustness Testing for Xstate",
+      "html_url": "https://github.com/ai4se4ai-lab/RATEN-ra4xstate",
+      "language": "TypeScript",
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "refine",
+      "description": "A React Framework for building  internal tools, admin panels, dashboards & B2B apps with unmatched flexibility.",
+      "html_url": "https://github.com/ai4se4ai-lab/refine",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "RES-AI",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/RES-AI",
+      "language": null,
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "rrsi",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/rrsi",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "second-brain",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/second-brain",
+      "language": null,
       "fork": false,
       "archived": false
     },
@@ -658,10 +554,122 @@
       "archived": false
     },
     {
-      "name": "mcp-obex-devops",
-      "description": null,
-      "html_url": "https://github.com/ai4se4ai-lab/mcp-obex-devops",
+      "name": "semantica",
+      "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+      "html_url": "https://github.com/ai4se4ai-lab/semantica",
       "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "SIKG",
+      "description": "SIKG - Semantic Impact Knowledge Graph",
+      "html_url": "https://github.com/ai4se4ai-lab/SIKG",
+      "language": "TypeScript",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "SkillNet",
+      "description": "Create, Evaluate, and Connect AI Skills",
+      "html_url": "https://github.com/ai4se4ai-lab/SkillNet",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "smolagents",
+      "description": "🤗 smolagents: a barebones library for agents that think in code.",
+      "html_url": "https://github.com/ai4se4ai-lab/smolagents",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "srvmind-lab",
+      "description": "A landing page for all projects developed at srvmind-lab",
+      "html_url": "https://github.com/ai4se4ai-lab/srvmind-lab",
+      "language": null,
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "swe-multiskillsbench",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/swe-multiskillsbench",
+      "language": "PDDL",
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "Test-AgenticAnalogicalReasoning",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/Test-AgenticAnalogicalReasoning",
+      "language": "Python",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "test-app",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/test-app",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "test-RapidPay",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/test-RapidPay",
+      "language": "Python",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "use-hpc",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/use-hpc",
+      "language": "Python",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "use-hpc-claude-skill",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/use-hpc-claude-skill",
+      "language": "Python",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "use-hpc-evaluation",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/use-hpc-evaluation",
+      "language": "Python",
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "verified-generative-coordination",
+      "description": "Formal specifications, proofs, and reproducible case studies for safe coordination of generative agents through versioned transformation automata.",
+      "html_url": "https://github.com/ai4se4ai-lab/verified-generative-coordination",
+      "language": null,
+      "fork": false,
+      "archived": false
+    },
+    {
+      "name": "warp",
+      "description": "Warp is an agentic development environment, born out of the terminal.",
+      "html_url": "https://github.com/ai4se4ai-lab/warp",
+      "language": null,
+      "fork": true,
+      "archived": false
+    },
+    {
+      "name": "YouTubeRetriver",
+      "description": null,
+      "html_url": "https://github.com/ai4se4ai-lab/YouTubeRetriver",
+      "language": "JavaScript",
       "fork": false,
       "archived": false
     }

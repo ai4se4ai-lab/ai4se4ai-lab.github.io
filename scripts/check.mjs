@@ -17,7 +17,7 @@ function element(){const classes=new Set();return {innerHTML:'',textContent:'',v
 const elements=new Map(ids.map(id=>['#'+id,element()]));
 elements.set('.menu-toggle',element());elements.get('#repo-kind').value='all';
 const appearanceRoot=Object.assign(element(),{dataset:{theme:'dark'}});
-const filterButtons=['All','Agents','Analysis','Infrastructure'].map(filter=>Object.assign(element(),{dataset:{filter}}));
+const filterButtons=['All','Agents','Analysis','Infrastructure','Repositories'].map(filter=>Object.assign(element(),{dataset:{filter}}));
 const categoryLinks=['Agents','Analysis','Infrastructure'].map(projectCategory=>Object.assign(element(),{dataset:{projectCategory}}));
 const document={querySelector(selector){assert(elements.has(selector),`Missing element ${selector}`);return elements.get(selector)},querySelectorAll(selector){if(selector==='[data-theme]')return [appearanceRoot];if(selector==='.filter')return filterButtons;if(selector==='a[data-project-category]')return categoryLinks;return []},addEventListener(){},createElement(){return element()}};
 const context={document,window:{},Date,fetch:async()=>({ok:true,json:async()=>data})};
@@ -26,9 +26,11 @@ runInNewContext(await readFile(new URL('assets/main.js',root),'utf8'),context);
 await new Promise(resolve=>setImmediate(resolve));
 const evaluate=code=>runInNewContext(code,context);
 const count=selector=>(elements.get(selector).innerHTML.match(/<article /g)||[]).length;
-assert.equal(count('#project-grid'),11);
+const featuredURLs=new Set(evaluate('projects.map(project => (project[4].startsWith("https://") ? project[4] : `https://github.com/ai4se4ai-lab/${project[4]}`).toLowerCase())'));
+const extraCount=data.repositories.filter(repo=>!repo.fork&&repo.name!=='ai4se4ai-lab.github.io'&&!featuredURLs.has(repo.html_url.toLowerCase())).length;
+assert.equal(count('#project-grid'),11+extraCount);
 // Real clicks bubble to <html data-theme="dark">. Appearance must never filter projects.
-for(const [index,expected] of [[1,3],[2,6],[3,2],[0,11]]){
+for(const [index,expected] of [[1,3],[2,6],[3,2],[4,extraCount],[0,11+extraCount]]){
  filterButtons[index].listeners.click();appearanceRoot.listeners.click?.();assert.equal(count('#project-grid'),expected);
  assert.equal(filterButtons[index].attributes['aria-pressed'],'true');
 }
@@ -37,7 +39,18 @@ evaluate("renderProjects('All')");
 assert.match(html,/<section class="repository-directory"/,'Repository directory must be visible without expanding details');
 assert(!html.includes('<details class="repository-directory"'));
 for(const [category,expected] of [['Agents',3],['Analysis',6],['Infrastructure',2]]){evaluate(`renderProjects('${category}')`);assert.equal(count('#project-grid'),expected);}
-evaluate("renderProjects('All')");assert.equal(count('#project-grid'),11);
+evaluate("renderProjects('All')");assert.equal(count('#project-grid'),11+extraCount);
+// New repositories become cards, while curated facts and map membership stay intact.
+context.repositoryFixture=[...data.repositories,{name:'New <project>',description:'<script>alert(1)</script>',html_url:'https://github.com/ai4se4ai-lab/new-project',fork:false,language:'JavaScript'}];
+evaluate("renderProjects('Agents'); integrateRepositoryProjects(repositoryFixture)");
+assert.equal(count('#project-grid'),3,'Refresh must preserve the selected filter');
+evaluate("renderProjects('Repositories')");assert.equal(count('#project-grid'),extraCount+1);
+assert.match(elements.get('#project-grid').innerHTML,/New &lt;project&gt;/);
+assert(!elements.get('#project-grid').innerHTML.includes('<script>'));
+assert.equal(evaluate('projects.length'),11,'Repository discovery must not change curated research/map facts');
+context.duplicateFixture=[{name:'SkillSpec alias',html_url:'https://github.com/AI4SE4AI-LAB/SWE-MULTISKILLSBENCH',fork:false},{name:'fork-example',html_url:'https://github.com/ai4se4ai-lab/fork-example',fork:true}];
+evaluate('integrateRepositoryProjects(duplicateFixture)');assert.equal(count('#project-grid'),0,'Exclude forks and duplicate featured repositories');
+evaluate("integrateRepositoryProjects(repositories); renderProjects('All')");assert.equal(count('#project-grid'),11+extraCount);
 assert.equal(count('#publication-list'),16);
 assert.equal((elements.get('#publication-list').innerHTML.match(/class="publication-disclosure"/g)||[]).length,16);
 assert.equal((elements.get('#publication-list').innerHTML.match(/data-pub-tab="abstract"/g)||[]).length,16);
@@ -64,7 +77,7 @@ let copied;context.navigator={clipboard:{writeText:async text=>{copied=text}}};a
 assert.equal(elements.get('#repo-list').children.length,data.repositories.length);
 elements.get('#repo-kind').value='original';evaluate('renderRepositories()');assert.equal(elements.get('#repo-list').children.length,data.repositories.filter(repo=>!repo.fork).length);
 elements.get('#repo-search').value='no-repository-matches-this';evaluate('renderRepositories()');assert.match(elements.get('#repo-list').children[0].textContent,/No repositories match/);
-elements.get('#repo-search').value='use-hpc';evaluate('renderRepositories()');assert.equal(elements.get('#repo-list').children.length,3);
+elements.get('#repo-kind').value='all';elements.get('#repo-search').value='use-hpc';evaluate('renderRepositories()');assert.equal(elements.get('#repo-list').children.length,data.repositories.filter(repo=>`${repo.name} ${repo.description||''} ${repo.language||''}`.toLowerCase().includes('use-hpc')).length);
 assert.equal(evaluate("escapeHTML('<script>\"&')"),'&lt;script&gt;&quot;&amp;');
 // Exercise project-map selection, tooltip, close/focus, and pause behavior.
 const nodes=Array.from({length:11},(_,index)=>Object.assign(element(),{dataset:{project:String(index)}}));
