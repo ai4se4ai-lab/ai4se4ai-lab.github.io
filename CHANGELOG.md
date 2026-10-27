@@ -50,7 +50,7 @@ The website is a curated portfolio, not a verbatim CV. Record deliberate content
 - CV SHA-256 (unchanged): 79869A0EE423C8477E0F44E7D5D989E9E0D7BA7E912E6D6B5BA5BB5135CCFCCD. Previous baseline: 2026-10-26 tracking entry, present in initial commit b66a7e9.
 - Files: assets/main.js, assets/publication-data.js, assets/research-layout.js, assets/research-map.js, assets/repositories.json, index.html, scripts/check.mjs, README.md, CHANGELOG.md.
 - Validation: live repository metadata and deployed inventory checked; node scripts/check.mjs passed, including 12 map nodes, narrow-layout separation, project filters, the new map's status/link, submitted citation/status and artifact link, automatic duplicate exclusion, and existing publication/search/theme/cursor checks. git diff --check passed. Browser visual verification was not performed.
-- Delivery: local implementation and validation complete; deployment pending.
+- Delivery: committed and pushed to main as 7d6ba1c; [Pages deployment 40551962276](https://github.com/ai4se4ai-lab/ai4se4ai-lab.github.io/actions/runs/40551962276) succeeded. Verified HTTP 200 and exact deployed/local content equality for index.html, assets/main.js, assets/research-layout.js, assets/research-map.js, and assets/publication-data.js. This delivery record is a subsequent documentation update.
 
 ### 2026-10-27 — Automatic repository discovery and Pages redeployment
 
