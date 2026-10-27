@@ -49,7 +49,7 @@ The website is a curated portfolio, not a verbatim CV. Record deliberate content
 - Refreshed the local snapshot from 83 to 84 public repositories and sorted it by name. Made repository search validation depend on actual snapshot content so future additions do not break deployment.
 - Files: `.github/workflows/pages.yml`, `scripts/refresh-repositories.mjs`, `scripts/check.mjs`, `assets/main.js`, `assets/repositories.json`, `index.html`, `README.md`, `CHANGELOG.md`.
 - Validation: live public API refresh and `node scripts/check.mjs` passed, including automatic card discovery, duplicate/fork exclusion, filter retention, escaping, all 11 research nodes, publication interactions, repository search, themes, and cursor behavior. Browser visual verification was not performed. No CV synchronization was needed.
-- Delivery: local implementation complete; commit, push, and deployment verification pending.
+- Delivery: committed and pushed to `main` as `7c3041a`; [Pages deployment 40436691625](https://github.com/ai4se4ai-lab/ai4se4ai-lab.github.io/actions/runs/40436691625) completed successfully. Verified HTTP 200 at https://ai4se4ai-lab.github.io/, the new project filter and integration script, and the deployed 2026-10-27 snapshot with 84 repositories. This delivery record is a subsequent documentation update.
 
 ### 2026-10-26 — Smaller, softer background pattern
 
