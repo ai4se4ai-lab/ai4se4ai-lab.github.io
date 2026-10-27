@@ -51,7 +51,7 @@ The website is a curated portfolio, not a verbatim CV. Record deliberate content
 - Files: `docs/02_Curriculum_Vitae.tex`, `assets/02_Curriculum_Vitae.pdf`, `assets/main.js`, `assets/publication-data.js`, `index.html`, `README.md`, `scripts/check.mjs`, `CHANGELOG.md`.
 - Deliberate omissions: retained existing portfolio citation formatting with author initials; administrative Refereed/Open Access fields are not displayed by this portfolio/CV format. No unverified preprint, abstract, DOI, or acceptance is added for manuscripts. The pasted page number and repeated author heading were not publication content.
 - Validation: `node scripts/check.mjs` passed with updated counts and checks for manuscript membership, exact statuses, unpublished citation types, artifact links, all 12 map nodes/details, filtering, repository search, themes, and cursor behavior. Rendered and visually inspected all seven PDF pages, then re-rendered and inspected the two pages affected by the final pagination fix; PDF text extraction confirms the added papers and statuses. No overfull/underfull boxes; a font-size substitution warning remains without a visible rendering defect. Browser visual verification was not performed.
-- Delivery: local completion and validation; deployment pending.
+- Delivery: committed and pushed as 03fb4de; [Pages deployment 40555120932](https://github.com/ai4se4ai-lab/ai4se4ai-lab.github.io/actions/runs/40555120932) succeeded. Verified HTTP 200 and exact deployed/local byte equality for index.html, assets/main.js, assets/publication-data.js, and the downloadable PDF. This delivery record is a subsequent documentation update.
 
 ### 2026-10-27 ? Feature Safe Coordination of Untrusted AI Agents
 
