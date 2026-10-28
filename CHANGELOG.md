@@ -41,6 +41,14 @@ The website is a curated portfolio, not a verbatim CV. Record deliberate content
 
 ## History
 
+### 2026-10-28 — Add NSERC RTI application to the CV
+
+- Added NSERC RTI to Research Funding and Proposal Development, with role Applicant, status Under review, title An Interconnected Computing Platform for Trustworthy Intelligent Systems, and requested amount CAD $41,680, from the author's supplied application description. The CV summarizes the request rather than reproducing equipment quotations, tax calculations, or the proposal narrative; no funding award is claimed.
+- Files: `docs/02_Curriculum_Vitae.tex`, `assets/02_Curriculum_Vitae.pdf`, `CHANGELOG.md`. No project, publication, or grant details elsewhere on the site changed.
+- Previous CV baseline: 2026-10-27 journal reconciliation, commit `03fb4de`, SHA-256 `4A80CA8435236BCACFE6B63E235DA4EF8FA3B7767189591990C5BE300E87575A`. Updated CV SHA-256: `27B5D76721063EDE97D0DE603A7AA973A375D64A465977F2FFD1860CBC8AF89C`.
+- Validation: compiled the final LaTeX source twice; the PDF remains seven pages. Visually reviewed the updated grants page and following page; no clipping, overlap, or added spill page. No overfull/underfull boxes or unresolved cross-reference warnings. Website checks and whitespace validation passed.
+- Delivery: local source and downloadable PDF updated; deployment pending.
+
 ### 2026-10-27 — Journal reconciliation and CV synchronization
 
 - Source: the author's supplied journal list, incorporated into `docs/02_Curriculum_Vitae.tex` before synchronizing the website. Previous source baseline: SHA-256 `79869A0EE423C8477E0F44E7D5D989E9E0D7BA7E912E6D6B5BA5BB5135CCFCCD`, recorded on 2026-10-26 and unchanged through website commit `c08bfc5`; initial CV baseline commit `b66a7e9`.
