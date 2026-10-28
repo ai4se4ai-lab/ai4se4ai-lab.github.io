@@ -47,7 +47,7 @@ The website is a curated portfolio, not a verbatim CV. Record deliberate content
 - Files: `docs/02_Curriculum_Vitae.tex`, `assets/02_Curriculum_Vitae.pdf`, `CHANGELOG.md`. No project, publication, or grant details elsewhere on the site changed.
 - Previous CV baseline: 2026-10-27 journal reconciliation, commit `03fb4de`, SHA-256 `4A80CA8435236BCACFE6B63E235DA4EF8FA3B7767189591990C5BE300E87575A`. Updated CV SHA-256: `27B5D76721063EDE97D0DE603A7AA973A375D64A465977F2FFD1860CBC8AF89C`.
 - Validation: compiled the final LaTeX source twice; the PDF remains seven pages. Visually reviewed the updated grants page and following page; no clipping, overlap, or added spill page. No overfull/underfull boxes or unresolved cross-reference warnings. Website checks and whitespace validation passed.
-- Delivery: local source and downloadable PDF updated; deployment pending.
+- Delivery: committed and pushed as feba87c; [Pages deployment 40632678493](https://github.com/ai4se4ai-lab/ai4se4ai-lab.github.io/actions/runs/40632678493) succeeded. Verified HTTP 200 and exact deployed/local PDF byte equality. This delivery record is a subsequent documentation update.
 
 ### 2026-10-27 — Journal reconciliation and CV synchronization
 
