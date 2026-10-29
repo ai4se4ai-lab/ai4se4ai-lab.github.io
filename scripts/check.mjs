@@ -28,22 +28,22 @@ const evaluate=code=>runInNewContext(code,context);
 const count=selector=>(elements.get(selector).innerHTML.match(/<article /g)||[]).length;
 const featuredURLs=new Set(evaluate('projects.map(project => (project[4].startsWith("https://") ? project[4] : `https://github.com/ai4se4ai-lab/${project[4]}`).toLowerCase())'));
 const extraCount=data.repositories.filter(repo=>!repo.fork&&repo.name!=='ai4se4ai-lab.github.io'&&!featuredURLs.has(repo.html_url.toLowerCase())).length;
-assert.equal(count('#project-grid'),12+extraCount);
+assert.equal(count('#project-grid'),13+extraCount);
 const coordinationName='Safe Coordination of Untrusted AI Agents';
 const coordinationURL='https://github.com/ai4se4ai-lab/coordination-of-untrusted-ai-agents';
 assert.equal((elements.get('#project-grid').innerHTML.match(/<h3>Safe Coordination of Untrusted AI Agents<\/h3>/g)||[]).length,1,'Show the curated project once');
 assert.equal(evaluate(`repositoryProjects.filter(project => project[4] === ${JSON.stringify(coordinationURL)}).length`),0,'Do not duplicate the curated project as an automatic repository card');
 // Real clicks bubble to <html data-theme="dark">. Appearance must never filter projects.
-for(const [index,expected] of [[1,4],[2,6],[3,2],[4,extraCount],[0,12+extraCount]]){
+for(const [index,expected] of [[1,4],[2,7],[3,2],[4,extraCount],[0,13+extraCount]]){
  filterButtons[index].listeners.click();appearanceRoot.listeners.click?.();assert.equal(count('#project-grid'),expected);
  assert.equal(filterButtons[index].attributes['aria-pressed'],'true');
 }
-for(const [index,expected] of [[0,4],[1,6],[2,2]]){categoryLinks[index].listeners.click();appearanceRoot.listeners.click?.();assert.equal(count('#project-grid'),expected);}
+for(const [index,expected] of [[0,4],[1,7],[2,2]]){categoryLinks[index].listeners.click();appearanceRoot.listeners.click?.();assert.equal(count('#project-grid'),expected);}
 evaluate("renderProjects('All')");
 assert.match(html,/<section class="repository-directory"/,'Repository directory must be visible without expanding details');
 assert(!html.includes('<details class="repository-directory"'));
-for(const [category,expected] of [['Agents',4],['Analysis',6],['Infrastructure',2]]){evaluate(`renderProjects('${category}')`);assert.equal(count('#project-grid'),expected);}
-evaluate("renderProjects('All')");assert.equal(count('#project-grid'),12+extraCount);
+for(const [category,expected] of [['Agents',4],['Analysis',7],['Infrastructure',2]]){evaluate(`renderProjects('${category}')`);assert.equal(count('#project-grid'),expected);}
+evaluate("renderProjects('All')");assert.equal(count('#project-grid'),13+extraCount);
 // New repositories become cards, while curated facts and map membership stay intact.
 context.repositoryFixture=[...data.repositories,{name:'New <project>',description:'<script>alert(1)</script>',html_url:'https://github.com/ai4se4ai-lab/new-project',fork:false,language:'JavaScript'}];
 evaluate("renderProjects('Agents'); integrateRepositoryProjects(repositoryFixture)");
@@ -51,10 +51,10 @@ assert.equal(count('#project-grid'),4,'Refresh must preserve the selected filter
 evaluate("renderProjects('Repositories')");assert.equal(count('#project-grid'),extraCount+1);
 assert.match(elements.get('#project-grid').innerHTML,/New &lt;project&gt;/);
 assert(!elements.get('#project-grid').innerHTML.includes('<script>'));
-assert.equal(evaluate('projects.length'),12,'Repository discovery must not change curated research/map facts');
+assert.equal(evaluate('projects.length'),13,'Repository discovery must not change curated research/map facts');
 context.duplicateFixture=[{name:'SkillSpec alias',html_url:'https://github.com/AI4SE4AI-LAB/SWE-MULTISKILLSBENCH',fork:false},{name:'fork-example',html_url:'https://github.com/ai4se4ai-lab/fork-example',fork:true}];
 evaluate('integrateRepositoryProjects(duplicateFixture)');assert.equal(count('#project-grid'),0,'Exclude forks and duplicate featured repositories');
-evaluate("integrateRepositoryProjects(repositories); renderProjects('All')");assert.equal(count('#project-grid'),12+extraCount);
+evaluate("integrateRepositoryProjects(repositories); renderProjects('All')");assert.equal(count('#project-grid'),13+extraCount);
 assert.equal(count('#publication-list'),15);
 assert.equal((elements.get('#publication-list').innerHTML.match(/class="publication-disclosure"/g)||[]).length,15);
 assert.equal((elements.get('#publication-list').innerHTML.match(/data-pub-tab="abstract"/g)||[]).length,15);
@@ -67,6 +67,8 @@ assert.match(elements.get('#publication-list').innerHTML,/Author-supplied abstra
 assert.match(elements.get('#publication-list').innerHTML,/50 SWE-bench issues from 12 repositories/);
 const morphTitle='Does Forgetting Help? Studying Context Reset Policies in LLM Fault Localization.';
 const morphRecord=evaluate(`submitted.find(p=>p[2]===${JSON.stringify(morphTitle)})`);
+assert.equal(morphRecord[4],'https://github.com/ai4se4ai-lab/MORPH-FL');
+assert.equal(evaluate("repositoryProjects.filter(p=>p[4]==='https://github.com/ai4se4ai-lab/MORPH-FL').length"),0,'Do not duplicate MORPH-FL as an automatic repository card');
 assert.equal(morphRecord[0],'Submitted');assert.equal(morphRecord[1],'JSS');
 assert(!evaluate(`published.some(p=>p[2]===${JSON.stringify(morphTitle)})`));
 const morphCitation=evaluate(`createBibTeX(${JSON.stringify(morphTitle)}, publicationDetails[${JSON.stringify(morphTitle)}])`);
@@ -108,18 +110,18 @@ elements.get('#repo-search').value='no-repository-matches-this';evaluate('render
 elements.get('#repo-kind').value='all';elements.get('#repo-search').value='use-hpc';evaluate('renderRepositories()');assert.equal(elements.get('#repo-list').children.length,data.repositories.filter(repo=>`${repo.name} ${repo.description||''} ${repo.language||''}`.toLowerCase().includes('use-hpc')).length);
 assert.equal(evaluate("escapeHTML('<script>\"&')"),'&lt;script&gt;&quot;&amp;');
 // Exercise project-map selection, tooltip, close/focus, and pause behavior.
-const nodes=Array.from({length:12},(_,index)=>Object.assign(element(),{dataset:{project:String(index)}}));
-const threads=Array.from({length:12},(_,index)=>Object.assign(element(),{dataset:{thread:String(index)}}));
+const nodes=Array.from({length:13},(_,index)=>Object.assign(element(),{dataset:{project:String(index)}}));
+const threads=Array.from({length:13},(_,index)=>Object.assign(element(),{dataset:{thread:String(index)}}));
 elements.set('.research-map',element());
 document.querySelectorAll=selector=>selector==='.research-node'?nodes:selector==='[data-thread]'?threads:[];
 context.clearTimeout=clearTimeout;context.setTimeout=setTimeout;
 elements.get('#research-detail').hidden=true;
 runInNewContext(await readFile(new URL('assets/research-layout.js',root),'utf8'),context);
 runInNewContext(await readFile(new URL('assets/research-map.js',root),'utf8'),context);
-assert.equal((elements.get('#research-nodes').innerHTML.match(/<button /g)||[]).length,12);
-assert.equal((elements.get('#research-connections').innerHTML.match(/<g /g)||[]).length,12);
+assert.equal((elements.get('#research-nodes').innerHTML.match(/<button /g)||[]).length,13);
+assert.equal((elements.get('#research-connections').innerHTML.match(/<g /g)||[]).length,13);
 const layout=evaluate('projects.map(([name])=>({name,...researchPlacement[name]}))');
-assert.equal(new Set(layout.map(item=>item.name)).size,12);
+assert.equal(new Set(layout.map(item=>item.name)).size,13);
 for(const item of layout){assert(item.reason);assert(['ai','bridge','se'].includes(item.world));assert(item.x>=15&&item.x<=85);assert(item.y>=40&&item.y<=90);for(const related of item.related)assert(layout.some(item=>item.name===related));}
 assert(layout.find(item=>item.name==='AutoM2M').x<layout.find(item=>item.name==='SkillSpec').x);
 assert(layout.find(item=>item.name==='SkillSpec').x<layout.find(item=>item.name==='MRegTest').x);
@@ -128,9 +130,10 @@ for(let i=0;i<layout.length;i++)for(let j=i+1;j<layout.length;j++){const dx=Math
 nodes[0].listeners.pointerenter();assert.equal(elements.get('#research-tooltip').hidden,false);assert.match(elements.get('#research-tooltip').innerHTML,/SkillSpec/);
 assert(nodes[1].classList.contains('related-node'));
 assert.equal(elements.get('#map-context').textContent,'Formal methods for AI skills');
-for(const [index,name,repository] of [[0,'SkillSpec','swe-multiskillsbench'],[5,'TAAF / TraceQA-100','Alireza-Ezaz/TAAF'],[10,'MReplayer','MajidGitHubRepos/MReplayer'],[11,coordinationName,'coordination-of-untrusted-ai-agents']]){
+for(const [index,name,repository] of [[0,'SkillSpec','swe-multiskillsbench'],[5,'TAAF / TraceQA-100','Alireza-Ezaz/TAAF'],[10,'MReplayer','MajidGitHubRepos/MReplayer'],[11,coordinationName,'coordination-of-untrusted-ai-agents'],[12,'MORPH-FL','MORPH-FL']]){
  nodes[index].listeners.click();assert.equal(elements.get('#research-detail').hidden,false);assert.equal(elements.get('#detail-title').textContent,name);assert(elements.get('#detail-link').href.endsWith(repository));assert.equal(nodes[index].attributes['aria-expanded'],'true');
  assert(elements.get('#detail-position').textContent.length>20);
+ if(name==='MORPH-FL')assert.equal(elements.get('#detail-status').textContent,'Submitted · JSS');
  if(name===coordinationName)assert.equal(elements.get('#detail-status').textContent,'Submitted · IEEE TSE');
  elements.get('#detail-close').listeners.click();assert.equal(elements.get('#research-detail').hidden,true);assert(nodes[index].focused);assert.equal(nodes[index].attributes['aria-expanded'],'false');
 }
@@ -146,5 +149,5 @@ for(const stored of [undefined,'light','dark','blocked']){
  themeElements.get('#theme-toggle').listeners.click();assert.equal(themeDocument.documentElement.dataset.theme,stored==='light'?'dark':'light');
  if(stored!=='blocked')assert.equal(preference,themeDocument.documentElement.dataset.theme);
 }
-console.log(`Passed: local links, anchors, ${data.repositories.length} repositories, project/publication filters, publication disclosures and citations, tab selection, clipboard success/fallback, repository search, HTML escaping, 12 research nodes, tooltip, detail selection and links, close/focus, pause/resume, and theme preferences.`);
+console.log(`Passed: local links, anchors, ${data.repositories.length} repositories, project/publication filters, publication disclosures and citations, tab selection, clipboard success/fallback, repository search, HTML escaping, 13 research nodes, tooltip, detail selection and links, close/focus, pause/resume, and theme preferences.`);
 await import('./check-cursor.mjs');

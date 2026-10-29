@@ -41,6 +41,25 @@ The website is a curated portfolio, not a verbatim CV. Record deliberate content
 
 ## History
 
+### 2026-10-29 — Clarify academic appointment affiliations
+
+- Updated the CV's Postdoctoral Research Fellow affiliation to Concordia University, Department of Computer Science and Software Engineering, and the Visiting Researcher affiliation to McGill University, Electrical and Computer Engineering, following the author's clarification. Confirmed that the Faculty Lecturer entry already identifies McGill's School of Continuing Studies; retained that affiliation and the existing appointment dates.
+- Split the website's combined Postdoctoral Fellow / Visiting Researcher timeline item into separate appointments with their respective institutions and departments. The Faculty Lecturer / Assistant Professor (Professional) progression continues to identify McGill SCS.
+- Rebuilt the downloadable CV twice and visually reviewed page one: affiliations are legible, with no clipping, overlap, or pagination change (seven pages). PDF text extraction confirms all three affiliations. No overfull/underfull boxes; the existing font-size substitution warning remains. `node scripts/check.mjs` and `git diff --check` passed. Browser visual verification was not performed.
+- Previous CV baseline: preceding local MORPH-FL artifact update, SHA-256 `CE89A0EE1BF37A23E851B3A33F71BD268B3E85AEA99F41ED8EC1D715B1A3E2CE`. Updated CV SHA-256: `DAFD237FCFABF10EAC820BA815D4323F87194890C4D20C3FC8D9BD16446D3CC5`.
+- Files: `docs/02_Curriculum_Vitae.tex`, `assets/02_Curriculum_Vitae.pdf`, `index.html`, `CHANGELOG.md`. Project and publication data are unchanged by this correction.
+- Delivery: completed locally; not committed, pushed, or deployed.
+
+### 2026-10-29 — Add MORPH-FL research artifact
+
+- Added MORPH-FL to Research Software and Artifacts in the CV with a concise description of Python fault localization, separate observation/hypothesis/dialogue models, and selective context resets. Marked the year as current project activity (`2026*`), preserving the manuscript's Submitted to JSS status.
+- Verified the public [MORPH-FL repository](https://github.com/ai4se4ai-lab/MORPH-FL), already present in the local repository inventory, and linked it from the CV, curated project card, research-map detail, and manuscript entry. The description comes from the author's supplied abstract; repository existence does not imply a release or evaluated artifact.
+- Increased curated artifacts from 12 to 13, with MORPH-FL in Analysis. Added a bridge placement on the research map and moved SIKG slightly upward (82% to 79%) to preserve node spacing. Automatic repository cards exclude the newly curated entry, preventing duplication. Updated README counts and meaningful project/filter/map expectations.
+- Previous CV baseline: preceding MORPH-FL submission synchronization, SHA-256 `DA7B8E102F261FEDFA77D64CF48C49B8405B343CD86DE678C2350A3ED71C144B`, now present in commit `009409e`. Updated CV SHA-256: `CE89A0EE1BF37A23E851B3A33F71BD268B3E85AEA99F41ED8EC1D715B1A3E2CE`.
+- Files: `docs/02_Curriculum_Vitae.tex`, `assets/02_Curriculum_Vitae.pdf`, `assets/main.js`, `assets/research-layout.js`, `scripts/check.mjs`, `README.md`, `CHANGELOG.md`.
+- Validation: compiled the CV twice; text extraction and visual review confirm the new artifact and repository link on page four, without clipping, overlap, or pagination changes (seven pages). The existing font-size substitution warning remains; no overfull/underfull boxes. `node scripts/check.mjs` passed, including 13 map nodes, narrow-layout separation, seven Analysis projects, manuscript artifact link, MORPH-FL map details/status, duplicate exclusion, and existing interactions. `git diff --check` passed. Browser visual verification was not performed.
+- Delivery: completed locally; not committed, pushed, or deployed.
+
 ### 2026-10-29 — MORPH-FL JSS submission and CV synchronization
 
 - Added the author's confirmed single-author manuscript, Does Forgetting Help? Studying Context Reset Policies in LLM Fault Localization (MORPH-FL), to the CV and website as Submitted to Journal of Systems and Software, 2026. Manuscript count increased from ten to eleven; the 15 published/accepted entries are unchanged. No acceptance is claimed.

@@ -11,7 +11,8 @@ const projects = [
   ['RATEN / ra4xstate','Analysis','Efficient robustness analysis and test enhancement for state machines and statecharts.','SoSyM 2026','RATEN-ra4xstate','State machines · Robustness'],
   ['MRegTest','Analysis','Replay-based regression testing for distributed UML-RT models.','MODELS Companion 2021','https://github.com/MajidGitHubRepos/MRegTest','UML-RT · Regression testing'],
   ['MReplayer','Analysis','Deterministic execution-trace replay for distributed reactive systems in model-driven development.','MODELS Companion 2020','https://github.com/MajidGitHubRepos/MReplayer','Execution traces · Replay'],
-  ['Safe Coordination of Untrusted AI Agents','Agents','A deterministic controller coordinates untrusted agent proposals, tracks dependencies, and publishes consistent snapshots, with TLA+ specifications and reproducible case studies.','Submitted · IEEE TSE','coordination-of-untrusted-ai-agents','Coordination · Formal methods']
+  ['Safe Coordination of Untrusted AI Agents','Agents','A deterministic controller coordinates untrusted agent proposals, tracks dependencies, and publishes consistent snapshots, with TLA+ specifications and reproducible case studies.','Submitted · IEEE TSE','coordination-of-untrusted-ai-agents','Coordination · Formal methods'],
+  ['MORPH-FL','Analysis','LLM-based fault localization for Python with separate observation, hypothesis, and dialogue models, enabling selective context resets that preserve recorded observations.','Submitted · JSS','MORPH-FL','Fault localization · Context management']
 ];
 const published = [
  ['2027','ICSE','SkillSpec: A formally verifiable specification format for composing agent skills.','M. Babaei and A. Heydarnoori. Research Track; to appear.','https://github.com/ai4se4ai-lab/swe-multiskillsbench'],
@@ -31,7 +32,7 @@ const published = [
  ['2013','Natural Computing','A novel text and image encryption method based on chaos theory and DNA computing.','M. Babaei. 12(1):101–107.']
 ];
 const submitted = [
- ['Submitted','JSS','Does Forgetting Help? Studying Context Reset Policies in LLM Fault Localization.','M. Babaei. MORPH-FL.'],
+ ['Submitted','JSS','Does Forgetting Help? Studying Context Reset Policies in LLM Fault Localization.','M. Babaei. MORPH-FL.','https://github.com/ai4se4ai-lab/MORPH-FL'],
  ["Revision requested","EMSE","Temporal Graph Models for Predictive Monitoring in Microservices.","G. Khodabandeh, A. Ezaz, M. Babaei, and N. Ezzati-Jivan."],
  ['Revision requested','EMSE','RapidPay: Identifying and prioritizing self-admitted technical debt chains for effective debt management in software systems.','M. Babaei, N. Ezzati-Jivan, F. Hendijani Fard, and A. Hamou-Lhadj.','https://github.com/ai4se4ai-lab/RapidPay'],
  ['Submitted','IEEE TSE','Safe Coordination of Untrusted AI Agents.','M. Babaei.','https://github.com/ai4se4ai-lab/coordination-of-untrusted-ai-agents'],
