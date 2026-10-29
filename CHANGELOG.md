@@ -41,6 +41,16 @@ The website is a curated portfolio, not a verbatim CV. Record deliberate content
 
 ## History
 
+### 2026-10-29 — MORPH-FL JSS submission and CV synchronization
+
+- Added the author's confirmed single-author manuscript, Does Forgetting Help? Studying Context Reset Policies in LLM Fault Localization (MORPH-FL), to the CV and website as Submitted to Journal of Systems and Software, 2026. Manuscript count increased from ten to eleven; the 15 published/accepted entries are unchanged. No acceptance is claimed.
+- Added the complete author-supplied abstract, explicitly labeled as such, and an `@unpublished` BibTeX citation with the target venue in its note. Submitted entries can now show an Abstract tab when abstract content is available; existing manuscripts without abstracts retain their BibTeX view. No DOI, public preprint, or repository link was inferred.
+- Recompiled the downloadable CV twice. Deliberate omissions: the introduction, keywords, contact metadata, and full abstract are not reproduced in the compact CV entry; the website includes the abstract but not the introduction. The 12 curated artifacts and research map remain unchanged because no MORPH-FL repository was supplied; existing map checks pass.
+- Previous CV baseline: 2026-10-28 RTI update, commit `feba87c`, SHA-256 `27B5D76721063EDE97D0DE603A7AA973A375D64A465977F2FFD1860CBC8AF89C`. Updated CV SHA-256: `DA7B8E102F261FEDFA77D64CF48C49B8405B343CD86DE678C2350A3ED71C144B`.
+- Files: `docs/02_Curriculum_Vitae.tex`, `assets/02_Curriculum_Vitae.pdf`, `assets/main.js`, `assets/publication-data.js`, `scripts/check.mjs`, `README.md`, `CHANGELOG.md`.
+- Validation: `node scripts/check.mjs` passed, including the eleven-manuscript count, MORPH-FL status and citation, supplied abstract, initial tab/panel state, and existing project/map, citation interaction, repository, theme, and cursor checks. PDF text confirms the new entry; visually inspected the manuscript page and following artifact page with no clipping, overlap, or pagination change (seven pages). No overfull/underfull boxes or unresolved cross-reference warnings; the existing font-size substitution warning remains without a visible defect. `git diff --check` passed. Browser visual verification was not performed.
+- Delivery: completed locally; not committed, pushed, or deployed.
+
 ### 2026-10-28 — Add NSERC RTI application to the CV
 
 - Added NSERC RTI to Research Funding and Proposal Development, with role Applicant, status Under review, title An Interconnected Computing Platform for Trustworthy Intelligent Systems, and requested amount CAD $41,680, from the author's supplied application description. The CV summarizes the request rather than reproducing equipment quotations, tax calculations, or the proposal narrative; no funding award is claimed.

@@ -31,6 +31,7 @@ const published = [
  ['2013','Natural Computing','A novel text and image encryption method based on chaos theory and DNA computing.','M. Babaei. 12(1):101–107.']
 ];
 const submitted = [
+ ['Submitted','JSS','Does Forgetting Help? Studying Context Reset Policies in LLM Fault Localization.','M. Babaei. MORPH-FL.'],
  ["Revision requested","EMSE","Temporal Graph Models for Predictive Monitoring in Microservices.","G. Khodabandeh, A. Ezaz, M. Babaei, and N. Ezzati-Jivan."],
  ['Revision requested','EMSE','RapidPay: Identifying and prioritizing self-admitted technical debt chains for effective debt management in software systems.','M. Babaei, N. Ezzati-Jivan, F. Hendijani Fard, and A. Hamou-Lhadj.','https://github.com/ai4se4ai-lab/RapidPay'],
  ['Submitted','IEEE TSE','Safe Coordination of Untrusted AI Agents.','M. Babaei.','https://github.com/ai4se4ai-lab/coordination-of-untrusted-ai-agents'],
@@ -66,21 +67,24 @@ function renderPublications(kind = 'published') {
     const metadata = publicationDetails[title];
     const id = `pub-${kind}-${index}`;
     const review = kind !== 'published';
+    const hasAbstract = !review || Boolean(metadata.abstractText || metadata.abstractSummary);
     const bib = createBibTeX(title, metadata);
     const externalLink = (url, label) => url ? `<a class="text-link" href="${escapeHTML(url)}" target="_blank" rel="noopener">${label} ↗</a>` : '';
     const codeUrl = artifact?.startsWith('https://github.com/') ? artifact : null;
-    const abstract = metadata.abstractSummary
+    const abstract = metadata.abstractText
+      ? `<p class="abstract-kind">Author-supplied abstract</p><p>${escapeHTML(metadata.abstractText)}</p>`
+      : metadata.abstractSummary
       ? `<p class="abstract-kind">Abstract summary</p><p>${escapeHTML(metadata.abstractSummary)}</p>${externalLink(metadata.abstractSource, 'Source and original abstract')}`
       : '<p class="small">An abstract has not yet been added for this paper.</p>';
-    return `<article class="publication-entry"><details class="publication-disclosure"><summary class="publication"><span class="publication-label">${escapeHTML(year)}<small>${escapeHTML(venue)}</small></span><span class="publication-summary"><span class="publication-title">${escapeHTML(title)}</span><span class="publication-authors">${escapeHTML(authors)}</span><span class="publication-hint">${review ? 'BibTeX citation' : 'Abstract & BibTeX'} · Click to expand</span></span><span class="publication-expand" aria-hidden="true">+</span></summary><div class="publication-content">
+    return `<article class="publication-entry"><details class="publication-disclosure"><summary class="publication"><span class="publication-label">${escapeHTML(year)}<small>${escapeHTML(venue)}</small></span><span class="publication-summary"><span class="publication-title">${escapeHTML(title)}</span><span class="publication-authors">${escapeHTML(authors)}</span><span class="publication-hint">${hasAbstract ? 'Abstract & BibTeX' : 'BibTeX citation'} · Click to expand</span></span><span class="publication-expand" aria-hidden="true">+</span></summary><div class="publication-content">
       <div class="publication-links">${!review ? externalLink(metadata.paperUrl, 'Published paper') : ''}${externalLink(metadata.preprintUrl, 'Preprint / author manuscript')}${externalLink(codeUrl, 'Code / artifact')}</div>
       ${review && !metadata.preprintUrl ? '<p class="small preprint-note">No verified public preprint link is currently available.</p>' : ''}
       <div class="citation-tabs" role="tablist" aria-label="Details for ${escapeHTML(title)}">
-        ${!review ? `<button type="button" id="${id}-abstract-tab" role="tab" aria-selected="true" aria-controls="${id}-abstract" data-pub-tab="abstract">Abstract</button>` : ''}
-        <button type="button" id="${id}-bib-tab" role="tab" aria-selected="${review}" aria-controls="${id}-bib" tabindex="${review ? '0' : '-1'}" data-pub-tab="bib">BibTeX</button>
+        ${hasAbstract ? `<button type="button" id="${id}-abstract-tab" role="tab" aria-selected="true" aria-controls="${id}-abstract" data-pub-tab="abstract">Abstract</button>` : ''}
+        <button type="button" id="${id}-bib-tab" role="tab" aria-selected="${!hasAbstract}" aria-controls="${id}-bib" tabindex="${hasAbstract ? '-1' : '0'}" data-pub-tab="bib">BibTeX</button>
       </div>
-      ${!review ? `<div class="publication-panel" role="tabpanel" id="${id}-abstract" aria-labelledby="${id}-abstract-tab" tabindex="0">${abstract}</div>` : ''}
-      <div class="publication-panel" role="tabpanel" id="${id}-bib" aria-labelledby="${id}-bib-tab" tabindex="0"${review ? '' : ' hidden'}>
+      ${hasAbstract ? `<div class="publication-panel" role="tabpanel" id="${id}-abstract" aria-labelledby="${id}-abstract-tab" tabindex="0">${abstract}</div>` : ''}
+      <div class="publication-panel" role="tabpanel" id="${id}-bib" aria-labelledby="${id}-bib-tab" tabindex="0"${hasAbstract ? ' hidden' : ''}>
         <div class="citation-actions"><button type="button" class="copy-citation" data-copy-citation="${id}-citation">Copy BibTeX</button><a download="${escapeHTML(metadata.key)}.bib" href="data:text/plain;charset=utf-8,${encodeURIComponent(bib)}">Download .bib ↓</a><span class="copy-status" role="status" aria-live="polite"></span></div>
         <pre id="${id}-citation" class="bibtex-code" tabindex="0"><code>${escapeHTML(bib)}</code></pre>
       </div></div></details></article>`;

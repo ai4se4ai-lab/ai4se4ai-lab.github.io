@@ -1,6 +1,16 @@
 // Verified links and citation fields; academic statuses remain sourced from the CV.
 // Abstract summaries are paraphrases, not publisher abstracts. Missing values are intentional.
 const publicationDetails = {
+  "Does Forgetting Help? Studying Context Reset Policies in LLM Fault Localization.": {
+    "key": "babaei-morph-fl",
+    "type": "unpublished",
+    "author": "M. Babaei",
+    "year": "2026",
+    "note": "Submitted manuscript (MORPH-FL). Target venue: Journal of Systems and Software (JSS). Submission and abstract supplied by the author, October 29, 2026.",
+    "checked": "2026-10-29",
+    "sources": ["docs/02_Curriculum_Vitae.tex"],
+    "abstractText": "Large language model (LLM) agents that localize faults from bug reports accumulate a dialogue in which checked facts, tentative explanations and the reasoning that links them are interleaved. When such an investigation stalls, a common remedy is to clear the context and start afresh, yet a reset that discards the dialogue can also discard what the agent has already established. We ask whether forgetting helps a localization agent, and what it should forget. We present MORPH-FL, a fault-localization framework for Python that keeps observations, hypotheses and dialogue in separate runtime models, so that a reset can clear dialogue and prune hypotheses while preserving every recorded observation. Using the framework as an experimental instrument, we compare four context policies on 50 SWE-bench issues from 12 repositories with two open 7B-scale code LLMs: adaptive reset on stagnation, continuous context, fixed-interval reset, and an observation-only view that shows the investigator its observations but neither its hypotheses nor its dialogue. Resetting the context, adaptively or on a schedule, did not change which issues were localized at rank one. The observation-only view localized more issues with one model and, with the other, kept grounded hypotheses on nearly every issue where the richer views kept almost none, at a higher time cost. Because rankings fall back to lexical retrieval when an investigation yields nothing, equal accuracy concealed very different investigations. The results suggest that what an agent is shown matters more than when its context is reset, and that context policies must be judged on investigation output and cost as well as accuracy."
+  },
   "SkillSpec: A formally verifiable specification format for composing agent skills.": {
     "key": "babaei-skillspec",
     "type": "inproceedings",
