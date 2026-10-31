@@ -41,6 +41,14 @@ The website is a curated portfolio, not a verbatim CV. Record deliberate content
 
 ## History
 
+### 2026-10-31 — LIFTDroid major revision at IEEE TSE
+
+- Updated Understanding and detecting login flow errors in Android applications (LIFTDroid) from Submitted to Major revision at IEEE Transactions on Software Engineering, following the author's confirmation. Synchronized the CV, website manuscript entry, and unpublished BibTeX status/provenance. The paper remains in submitted/under-review/revision-requested work; publication and project counts are unchanged. No project data or research-map change was needed.
+- Rebuilt the downloadable CV twice. PDF text extraction confirms Major revision; visual review of page three found no clipping, overlap, or pagination change (seven pages). No overfull/underfull boxes or unresolved cross-reference warnings; the existing font-size substitution warning remains. `node scripts/check.mjs` passed, including the updated exact manuscript/citation status expectation; `git diff --check` passed. Browser visual verification was not performed.
+- Previous CV baseline: 2026-10-29 appointment-affiliation update, SHA-256 `DAFD237FCFABF10EAC820BA815D4323F87194890C4D20C3FC8D9BD16446D3CC5`. Updated CV SHA-256: `34B146F84725F25DA4D7BEC483FEC656ACA9258D1CEF445F1656841D0093225D`.
+- Files: `docs/02_Curriculum_Vitae.tex`, `assets/02_Curriculum_Vitae.pdf`, `assets/main.js`, `assets/publication-data.js`, `scripts/check.mjs`, `CHANGELOG.md`. No content omissions or unresolved discrepancies.
+- Delivery: completed locally; not committed, pushed, or deployed.
+
 ### 2026-10-29 — Clarify academic appointment affiliations
 
 - Updated the CV's Postdoctoral Research Fellow affiliation to Concordia University, Department of Computer Science and Software Engineering, and the Visiting Researcher affiliation to McGill University, Electrical and Computer Engineering, following the author's clarification. Confirmed that the Faculty Lecturer entry already identifies McGill's School of Continuing Studies; retained that affiliation and the existing appointment dates.

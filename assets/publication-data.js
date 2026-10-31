@@ -305,8 +305,8 @@ const publicationDetails = {
     "key": "babaei-liftdroid",
     "type": "unpublished",
     "author": "Z. Zhou and R. Chen and N. Yun and J. Chen and Y. Liu and M. Babaei and L. Wei",
-    "note": "Submitted manuscript. Target venue: IEEE Transactions on Software Engineering. Status from the author-updated CV, October 27, 2026.",
-    "checked": "2026-10-27",
+    "note": "Major revision. Target venue: IEEE Transactions on Software Engineering. Status from the author-updated CV, October 31, 2026.",
+    "checked": "2026-10-31",
     "sources": [
       "docs/02_Curriculum_Vitae.tex"
     ],

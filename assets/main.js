@@ -40,7 +40,7 @@ const submitted = [
  ['Submitted','ASE journal','RES-AI: Evidence-bound readiness for AI software engineering experiments on shared HPC infrastructure.','M. Babaei.','https://github.com/ai4se4ai-lab/RES-AI'],
  ['Submitted','ICSE 2027 NIER','AgentM2M: M2M transformations for agentic collaborations in software engineering.','M. Babaei, S. Farshidi, O. Adesina, N. Ezzati-Jivan, and L. Wei.','https://github.com/ai4se4ai-lab/AgentM2M'],
  ['Submitted','EMSE','When the team writes itself: Reliable and traceable LLM-assembled agent teams through checked model transformations.','M. Babaei. AutoM2M.','https://github.com/ai4se4ai-lab/M2MColab'],
- ['Submitted','IEEE TSE','Understanding and detecting login flow errors in Android applications.','Z. Zhou, R. Chen, N. Yun, J. Chen, Y. Liu, M. Babaei, and L. Wei. LIFTDroid.'],
+ ['Major revision','IEEE TSE','Understanding and detecting login flow errors in Android applications.','Z. Zhou, R. Chen, N. Yun, J. Chen, Y. Liu, M. Babaei, and L. Wei. LIFTDroid.'],
  ['Submitted','MSR 2027','Mining design decisions and rationale evidence across research software projects.','S. Farshidi, M. Babaei, and B. Tekinerdogan.'],
  ['Submitted','ICSE 2027 NIER','Was it my code? Evidence-based performance diagnosis for CI on shared GPUs.','N. Ezzati-Jivan, M. Panahandeh, and M. Babaei.']
 ];

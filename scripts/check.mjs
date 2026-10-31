@@ -85,7 +85,7 @@ const coordinationCitation=evaluate(`createBibTeX(${JSON.stringify(coordinationN
 assert.match(coordinationCitation,/^@unpublished\{babaei-safe-coordination,/);
 assert.match(coordinationCitation,/Submitted manuscript\. Target venue: IEEE Transactions on Software Engineering/);
 assert(!evaluate('createBibTeX(submitted[0][2], publicationDetails[submitted[0][2]])').includes('journal ='));
-for(const [prefix,status] of [['RapidPay:','Revision requested'],['Temporal Graph Models','Revision requested'],['use-hpc:','Submitted'],['Understanding and detecting login','Submitted']]){
+for(const [prefix,status] of [['RapidPay:','Revision requested'],['Temporal Graph Models','Revision requested'],['use-hpc:','Submitted'],['Understanding and detecting login','Major revision']]){
  const record=evaluate(`submitted.find(p=>p[2].startsWith(${JSON.stringify(prefix)}))`);
  assert(record,`Missing manuscript: ${prefix}`);assert.equal(record[0],status);
  assert(!evaluate(`published.some(p=>p[2].startsWith(${JSON.stringify(prefix)}))`),'Manuscript must not appear as published/accepted');
